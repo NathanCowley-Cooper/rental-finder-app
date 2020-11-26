@@ -178,14 +178,13 @@ h1, h2, h3, h4, h5 {
 .page-link{
   height: 25vh;
   width: 25vh;
-  margin: 25%;
+  margin: 5% 2.5%;
 }
 
 #Link_1{
   align-self: center;
   justify-self: center;
-  height:100%;
-  width:100%;
+  display: grid;
 }
 
 #Link_1:hover{
@@ -197,8 +196,7 @@ h1, h2, h3, h4, h5 {
 #Link_2{
   align-self: center;
   justify-self: center;
-  height:100%;
-  width:100%;
+  display: grid;
 }
 
 #Link_2:hover{
@@ -210,8 +208,7 @@ h1, h2, h3, h4, h5 {
 #Link_3{
   align-self: center;
   justify-self: center;
-  height:100%;
-  width:100%;
+  display: grid;
 }
 
 #Link_3:hover{
