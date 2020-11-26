@@ -184,6 +184,8 @@ h1, h2, h3, h4, h5 {
 #Link_1{
   align-self: center;
   justify-self: center;
+  height:100%;
+  width:100%;
 }
 
 #Link_1:hover{
@@ -195,6 +197,8 @@ h1, h2, h3, h4, h5 {
 #Link_2{
   align-self: center;
   justify-self: center;
+  height:100%;
+  width:100%;
 }
 
 #Link_2:hover{
@@ -206,6 +210,8 @@ h1, h2, h3, h4, h5 {
 #Link_3{
   align-self: center;
   justify-self: center;
+  height:100%;
+  width:100%;
 }
 
 #Link_3:hover{
