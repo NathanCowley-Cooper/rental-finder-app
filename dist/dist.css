@@ -47,10 +47,9 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
   top: 0;
   width: 100%;
-  padding: 0 0.5em;
+  padding: 0 1%;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); }
 
 /* ==========WEBSITE FOOTER============= */
@@ -58,17 +57,16 @@ h1, h2, h3, h4, h5 {
   background-color: #1f1f1f;
   align-items: center;
   justify-content: space-between;
-  height: 200px;
   top: 0;
   width: 100%;
-  padding: 2em;
+  padding: 2.5% 7.5%;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .page-footer h3{
   font-family: 'Muli', sans-serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 2.5vh;
   color: white;
   text-align: center;
 }
@@ -76,7 +74,8 @@ h1, h2, h3, h4, h5 {
 .page-footer p{
   font-family: 'Muli', sans-serif;
   font-weight: 200;
-  font-size: 15px;
+  font-size: 1.5vh;
+  line-height: 2.5vh;
   color: white;
   text-align: center;
 }
@@ -109,7 +108,7 @@ h1, h2, h3, h4, h5 {
 /* LOGO FADE-IN */
 .logo-img {
   margin: 1em;
-  height: 80px;
+  height: 7.5vh;
   width: auto;
   justify-items: flex-start; }
 
@@ -135,17 +134,18 @@ h1, h2, h3, h4, h5 {
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07);
   height: auto;
   margin-left: 5%; 
+  width:22.5vw;
 }
 
 #home-text h1 {
   color: #b82026;
-  font-size: 30px;
+  font-size: 3vh;
   margin: 0;
   margin-bottom: 0.3em; }
 
 #home-text h6 {
   color: #414141;
-  font-size: 15px;
+  font-size: 1.5vh;
   font-weight: 50;
   margin: 0; }
 
@@ -161,14 +161,14 @@ h1, h2, h3, h4, h5 {
 #Page-QuickLinks{
   display: grid;
   grid-template-rows: auto auto;
-  padding: 100px 100px;
+  padding: 5% 7.5%;
   background-color:#1f1f1f;
 }
 
 #Page-QuickLinks h1{
   color: white;
   font-family: 'Muli', sans-serif;
-  font-size: 40px;
+  font-size: 6vh;
   font-weight: 200;
   text-align: center;
   margin: 0; 
@@ -176,9 +176,9 @@ h1, h2, h3, h4, h5 {
 }
   
 .page-link{
-  height: 180px;
-  width: 180px;
-  margin: 15px;
+  height: 25vh;
+  width: 25vh;
+  margin: 25%;
 }
 
 #Link_1{
@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5 {
 #Page-QuickLinks h3{
   color: white;
   font-family: 'Muli', sans-serif;
-  font-size: 16px;
+  font-size: 2.5vh;
   font-weight: 200;
   text-align: center;
   margin: 0; 
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5 {
 #aboutUs{
   display: grid;
   grid-template-columns: 60% 40%;
-  margin: 70px 100px;
+  margin: 5% 7.5%;
 }
 
 #column_One{
@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5 {
 #aboutUs h1{
   color:  #1f1f1f;
   font-family: 'Muli', sans-serif;
-  font-size: 60px;
+  font-size: 6VH;
   font-weight: 200;
   text-align: left;
   margin: 0; 
@@ -248,14 +248,15 @@ h1, h2, h3, h4, h5 {
 
 #aboutUs p{
   color:  #1f1f1f;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 2vh;
+  line-height: 3vh;
+  font-weight: 200;
 }
 
 .aboutUs_Img{
-  height: 400px;
-  width: 400px;
-  margin: 40px;
+  height: 40vh;
+  width: auto;
+  margin-left: 25%;
 }
 
 #login-bar {
@@ -269,7 +270,7 @@ h1, h2, h3, h4, h5 {
 
 #login-bar h1 {
   color:  #1f1f1f;
-  font-size: 30px;
+  font-size: 2.5vh;
   margin: 0;
   margin-bottom: 0.3em;
 }
@@ -978,7 +979,7 @@ hr{
   background: #b82026;
   color: #fff;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
   transition: all 0.2s ease;
   cursor: pointer; }
 
