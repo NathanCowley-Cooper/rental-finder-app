@@ -432,7 +432,7 @@ h1, h2, h3, h4, h5 {
   color: white;
   text-align: center;
   font-weight: 400;
-  font-size: 8vh;
+  font-size: 4vh;
 }
 
 .login-page .button {
@@ -625,7 +625,7 @@ hr{
   color: white;
   text-align: center;
   font-weight: 400;
-  font-size: 8vh;
+  font-size: 4vh;
 }
 
 .createAccount-Page .button {
@@ -1035,7 +1035,7 @@ hr{
   color: white; 
   text-align: center;
   font-weight: 400;
-  font-size: 6vh;}
+  font-size: 4vh;}
 
 
 .page-content-contact {
