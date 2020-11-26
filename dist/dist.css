@@ -1005,14 +1005,12 @@ hr{
 .filter-btn.is-active {
   border: 2px solid #b82026;
   color:#b82026;
-  margin: 13px 13px 13px -2px;
 }
 
 .filter-btn:hover {
   border: 2px solid #b82026;
   background: white;
   color:#b82026;
-  margin: 13px 13px 13px -2px;
 }
 
 .filter-btn:active {
