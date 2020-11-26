@@ -93,7 +93,7 @@ function homePageController(){
         }
     });
     aboutTl.from('#column_One', {y: 200, opacity: 0, duration: 1, ease: "power2"})
-    aboutTl.from('.aboutUs_Img', {x: 700, opacity: 1, duration: 1, ease: "power2"})
+    aboutTl.from('.aboutUs_Img', {x: 900, opacity: 1, duration: 1, ease: "power2"})
 
     //Quick Links-----------------------------------
     const linkTl = gsap.timeline({
