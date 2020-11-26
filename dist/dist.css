@@ -1070,7 +1070,7 @@ hr{
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px;
+  height: 40vh;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */ }
@@ -1144,7 +1144,7 @@ textarea {
   font-size: 2.2em; }
 
 .rental-modal .info {
-  font-size: 2em;
+  font-size: 4vh;
   color: #1f1f1f;
   font-weight: 200; 
   line-height: 180%;
@@ -1152,7 +1152,7 @@ textarea {
 
 .rental-modal .rental-icon {
   color: #1f1f1f;
-  font-size: 2.5em;
+  font-size: 5vh;
   display: block;
   font-weight: 200; }
 
@@ -1197,7 +1197,8 @@ textarea {
   border: none;
   transition: all 0.2s ease;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  font-size: 1.5vh }
 
 .modal-close-btn:hover {
   background: #b82026;
@@ -1213,7 +1214,7 @@ textarea {
 
 .modal_row-1 .address {
   font-family: 'Muli', sans-serif;
-  font-size: 30px;
+  font-size: 4vh;
   margin: 0; }
 
 .modal_row-2 {
@@ -1228,7 +1229,7 @@ textarea {
 }
 
 .modal_row-3 .info {
-  font-size: 1.2em;
+  font-size: 2.5vh;
   color:  #1f1f1f;
  }
 
