@@ -1,0 +1,650 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  font-family: arial;
+  scroll-behavior: smooth; }
+
+h1 {
+  font-family: arial;
+  font-weight: 400;
+  font-size: 60px; }
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0; }
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 110;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  padding: 0 0.5em;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); }
+
+.page-content {
+  transition: all 0.3s ease;
+  position: relative;
+  top: 0; }
+
+.page-content.hidden {
+  top: -20%;
+  opacity: 0; }
+
+#app {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 0; }
+
+#app.hidden {
+  opacity: 0; }
+
+/* main nav */
+#page-header {
+  position: fixed;
+  z-index: 100;
+  top: 0; }
+
+#main-nav a {
+  color: #333;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px; }
+
+#main-nav a.active {
+  font-weight: bold;
+  color: #b82026; }
+
+#rentals-list {
+  display: flex;
+  flex-wrap: wrap; }
+
+/* user nav */
+#user-nav {
+  display: flex; }
+
+#user-nav a {
+  text-decoration: none;
+  padding: 0.4em 1em;
+  text-transform: uppercase;
+  color: #333; }
+
+/* ==========LOGO============= */
+/* LOGO FADE-IN */
+.logo-img {
+  margin: 1em;
+  height: 80px;
+  width: auto;
+  justify-items: flex-start; }
+
+/* ==========LOGIN PAGE============= */
+.login-page {
+  position: relative;
+  z-index: 90;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: url(../images/hero-image-login.jpg);
+  background-size: cover; }
+
+.login-page h1 {
+  color: white;
+  text-align: center; }
+
+.login-page .button {
+  width: 40%;
+  margin: 0.5em 0; }
+
+/* ==========MY PORILE PAGE============= */
+.userProfile {
+  display: grid;
+  grid-template-rows: 1fr 1fr; }
+
+.userProfile h1 {
+  color: #b82026;
+  font-size: 50px;
+  margin-top: 0.5em;
+  margin-left: 0.5em; }
+
+#myProfile {
+  display: grid;
+  grid-template-columns: 20% auto; }
+
+#myPic {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/user-icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: start;
+  margin-left: 2em; }
+
+#myProfile h2 {
+  color: #b82026;
+  font-size: 30px; }
+
+/* ==========CREATE ACCOUNT PAGE============= */
+.createAccount-Page {
+  position: relative;
+  z-index: 90;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: url(../images/hero-image-createAccount.jpg);
+  background-size: cover; }
+
+.createAccount-Page h1 {
+  color: white;
+  text-align: center; }
+
+.createAccount-Page .button {
+  width: 35%; }
+
+.form-create-account {
+  align-self: center; }
+
+.createAccount-Column {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+#lastName {
+  margin: 0 0 0 2em; }
+
+#Dropdown {
+  font-size: 1em;
+  padding: 0.8em;
+  border-radius: 100px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 0.5em; }
+
+#Dropdown:focus {
+  border-color: #b82026;
+  outline: none;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
+
+/*Form Styles*/
+.field {
+  margin-bottom: 0.5em; }
+
+.inline-form {
+  width: 100%;
+  min-width: 500px; }
+
+.input {
+  font-size: 1em;
+  padding: 0.8em;
+  border-radius: 100px;
+  border: 1px solid #ddd;
+  width: 100%; }
+
+.input:focus {
+  border-color: #b82026;
+  outline: none;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
+
+fieldset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1em; }
+
+fieldset p {
+  margin: 0; }
+
+/* ==========HOME PAGE============= */
+#rental-image-home {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url(../images/hero-image.jpg);
+  background-size: cover;
+  display: flex; }
+
+#home-text {
+  background: white;
+  padding: 2%;
+  border-radius: 25px;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07);
+  height: 200px;
+  justify-self: end;
+  align-self: center;
+  margin-left: 5%; }
+
+#home-text h1 {
+  color: #b82026;
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 0.3em; }
+
+#home-text h6 {
+  color: black;
+  font-size: 15px;
+  font-weight: 50;
+  margin: 0; }
+
+.view-rentalPage-btn {
+  margin: 1em 0;
+  font-size: 1em; }
+
+/* ==========RENTAL PAGE============= */
+#rentals-list p {
+  font-size: 20px;
+  padding: 1em; }
+
+#filter-hero {
+  background: white;
+  padding: 2%;
+  position: relative;
+  display: grid;
+  justify-content: start; }
+
+#rental-image {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../images/hero-image.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+/* rental entry */
+.rental-entry {
+  width: 32%;
+  display: grid;
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: all 0.3s ease; }
+
+.rental-entry .content {
+  flex-grow: 1; }
+
+.rental-entry h3 {
+  font-size: 1.2em;
+  margin: 0 0 0.5em; }
+
+.rental-entry .rental-cover {
+  max-width: 100%;
+  /*Full Width*/
+  height: 250px;
+  /*Only 250px in Height*/
+  height: auto; }
+
+.row_one {
+  padding: 2.5%;
+  display: grid;
+  align-items: center; }
+
+.address {
+  font-family: arial;
+  font-size: 20px; }
+
+.row_two {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
+  padding: 0% 2.5%; }
+
+.column-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.column-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.column-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.column-4 {
+  display: grid;
+  align-items: center;
+  padding: 2%; }
+
+.info {
+  font-size: 20px; }
+
+.rental-entry:hover {
+  transform: scale(1.001); }
+
+.rental-entry.is-saved .rental-icon {
+  display: block; }
+
+.rental-entry .rental-icon {
+  color: black;
+  font-size: 30px;
+  display: block; }
+
+#user-saved-menu {
+  padding-right: 10px;
+  position: relative; }
+
+#user-saved-menu span {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  padding-top: 2px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px; }
+
+.loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: red;
+  animation: pulse 1s infinite;
+  border-radius: 50%;
+  margin: 20px auto; }
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); } }
+
+#notifications {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  width: 300px; }
+
+.notification-entry {
+  padding: 1em;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 200px;
+  margin-bottom: 10px;
+  position: relative; }
+
+/* saved page */
+#rental-image-saved {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../images/hero-image.jpg);
+  background-size: cover;
+  display: grid; }
+
+#hero-text {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  padding: 2%; }
+
+#hero-text h1 {
+  color: white;
+  margin: 0; }
+
+#hero-text h6 {
+  color: white;
+  font-size: 20px;
+  font-weight: 50;
+  margin: 0; }
+
+/* button */
+.button {
+  display: inline-block;
+  padding: 0.6em 2em;
+  border-radius: 100px;
+  background: #b82026;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+  transition: all 0.2s ease;
+  cursor: pointer; }
+
+.button:hover {
+  background: #282829;
+  transform: scale(1.05); }
+
+/* filer buttons */
+.filter-btn {
+  background: #282829;
+  font-size: 1em;
+  margin-right: 5px;
+  cursor: pointer; }
+
+.filter-btn.is-active {
+  background: #b82026; }
+
+/* Contact Page */
+#rental-image-contact {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../images/hero-image-contact.jpg);
+  background-size: cover;
+  display: grid; }
+
+#hero-contact-text {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: white; }
+
+.page-content-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%; }
+
+/* COLUMN ONE STYLING */
+.contact_details {
+  justify-self: center;
+  align-self: start;
+  padding: 8% 15%; }
+
+.contact_details h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0; }
+
+.contact_details h4 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  margin: 1em 1em 0.5em 0; }
+
+.contact_group {
+  display: flex; }
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 500px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */ }
+
+/* COLUMN TWO STYLING */
+.contact_form {
+  justify-self: center;
+  align-self: start;
+  padding: 8% 15%; }
+
+.column_two h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0 0 5% 0; }
+
+/*Form Styles*/
+.inline-form {
+  width: 100%;
+  min-width: 400px; }
+
+.input {
+  font-size: 1em;
+  padding: 0.8em;
+  border-radius: 100px;
+  border: 1px solid #ddd;
+  width: 100%; }
+
+.input:focus {
+  border-color: #b82026;
+  outline: none;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
+
+fieldset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1em; }
+
+fieldset p {
+  margin: 0; }
+
+textarea {
+  height: 200px; }
+
+.input_textbox {
+  border-radius: 25px;
+  font-size: 1em;
+  padding: 0.8em;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.input_textbox:focus {
+  border-color: #b82026;
+  outline: none;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
+
+/* rental modal */
+.rental-modal {
+  display: grid; }
+
+.rental-modal .adddress {
+  font-size: 2.2em; }
+
+.rental-modal .info {
+  font-size: 2.5em;
+  color: black; }
+
+.rental-modal .rental-icon {
+  color: black;
+  font-size: 2.5em;
+  display: block; }
+
+.rental-cover-modal {
+  width: 100%;
+  object-fit: cover; }
+
+.view-rental-btn {
+  margin: 1em; }
+
+.modal-content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 2% 15%; }
+
+/* Modal */
+.modal {
+  position: fixed;
+  width: 100%;
+  overflow-y: auto;
+  background: #fff;
+  height: 100%; }
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  background: #eee;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none; }
+
+.modal-close-btn:hover {
+  background: #b82026;
+  color: #fff;
+  transform: scale(1.1); }
+
+.modal_row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0; }
+
+.modal_row-1 .address {
+  font-family: arial;
+  font-size: 30px;
+  margin: 0; }
+
+.modal_row-2 {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 70%;
+  margin-bottom: 0.5em; }
+
+.modal_row-3 {
+  display: grid;
+  grid-template-columns: 70% 30%; }
+
+.modal_row-3 .info {
+  font-size: 1.2em;
+  color: black;
+  margin-bottom: 0.5em;
+  margin-left: 1.0em; }
+
+.modal_column-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.modal_column-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.modal_column-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
+
+.modal_column-4 {
+  display: grid;
+  align-items: center;
+  padding: 2%; }
