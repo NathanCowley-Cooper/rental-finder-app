@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5 {
 .page-link{
   height: 25vh;
   width: 25vh;
-  margin: 5% 2.5%;
+  margin: 10% 2.5%;
 }
 
 #Link_1{
@@ -708,8 +708,11 @@ hr{
   background: white;
   padding: 2% 4%;
   position: relative;
-  display: grid;
   justify-content: start; }
+
+  #filter-hero h2 {
+    font-size: 2.5vh;
+    font-weight: 400; }
 
 #rental-image {
   max-width: 100%;
@@ -966,11 +969,12 @@ hr{
 
 #hero-text h1 {
   color: white;
-  margin: 0; }
+  margin: 0; 
+  font-size: 8vh;}
 
 #hero-text h6 {
   color: white;
-  font-size: 20px;
+  font-size: 2vh;
   font-weight: 50;
   margin: 0; }
 
@@ -994,8 +998,8 @@ hr{
   background: white;
   color:#1f1f1f;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-  margin: 10px;
+  font-size: 1.2em;
+  margin: 1% 2% 1% 0;
   cursor: pointer; }
 
 .filter-btn.is-active {
