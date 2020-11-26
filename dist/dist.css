@@ -644,7 +644,12 @@ hr{
   border-radius: 100px;
   border: 1px solid #ddd;
   width: 100%;
-  margin-bottom: 0.7em; }
+  margin-bottom: 0.7em; 
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}
 
 #Dropdown:focus {
   border-color: #b82026;
