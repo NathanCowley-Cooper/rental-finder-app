@@ -161,14 +161,14 @@ h1, h2, h3, h4, h5 {
 #Page-QuickLinks{
   display: grid;
   grid-template-rows: auto auto;
-  padding: 5% 7.5%;
+  padding: 7.5% 7.5%;
   background-color:#1f1f1f;
 }
 
 #Page-QuickLinks h1{
   color: white;
   font-family: 'Muli', sans-serif;
-  font-size: 6vh;
+  font-size: 4vh;
   font-weight: 200;
   text-align: center;
   margin: 0; 
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5 {
 #aboutUs{
   display: grid;
   grid-template-columns: 60% 40%;
-  margin: 5% 7.5%;
+  margin: 7.5% 7.5%;
 }
 
 #column_One{
