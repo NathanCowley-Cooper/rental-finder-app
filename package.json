@@ -1,15 +1,20 @@
 {
   "name": "rental-finder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "scss": "node-sass -w master/master.scss dist/all.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nathan Cowley-Cooper",
   "license": "ISC",
   "dependencies": {
     "animejs": "^3.2.0",
-    "mustache": "^4.0.1"
+    "css-loader": "^5.0.1",
+    "mustache": "^4.0.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0"
   }
 }

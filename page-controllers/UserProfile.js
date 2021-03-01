@@ -25,14 +25,14 @@ function userProfilePageController(){
         data.smoker = 'No';
     }
     //Load Page Data
-    App.loadPage ('User Profile', 'template-page-userProfile', data, () =>{
+    App.loadPage ('User Profile | Rental Finder', 'template-page-userProfile', data, () =>{
         //Create Edit Button
         let editButton = document.createElement('button');
         editButton.classList.add('edit-btn');
         editButton.classList.add('button');
         editButton.innerText = "EDIT";
         //Render to user_row_four
-        let editDiv = document.querySelector('.userProfile > #myProfile > #userProfileContent > #user_row_four');
+        let editDiv = document.querySelector('.userProfile > .myProfile > .userProfileContent > .user_row_four');
         editDiv.appendChild(editButton);
 
         //Create Delete Button
@@ -41,7 +41,7 @@ function userProfilePageController(){
         deleteButton.classList.add('button');
         deleteButton.innerText = "DELETE";
         //Render to user_row_four
-        let deleteDiv = document.querySelector('.userProfile > #myProfile > #userProfileContent > #user_row_four');
+        let deleteDiv = document.querySelector('.userProfile > .myProfile > .userProfileContent > .user_row_four');
         deleteDiv.appendChild(deleteButton);
 
     });

@@ -7,7 +7,8 @@ import { Auth } from '../components/Auth.js';
 function userLoginPageController(){
     
     //Load Page Data
-    App.loadPage ('Login', 'template-page-login', {}, () =>{
+    App.loadPage ('Login | Rental Finder', 'template-page-login', {}, () =>{
+        //get sign up form
         //get sign up form
         let loginForm = document.querySelector('#form-login');
         // submit event
@@ -26,6 +27,20 @@ function userLoginPageController(){
             Auth.login(formDataObj);
 
         });
+
+
+        //Back To Top Button
+        function returnTop(){
+            const btt = document.getElementById('btt');
+            if ( window.pageYOffset > 800 ) {
+                btt.classList.add("active-btn");
+            } else {
+                btt.classList.remove("active-btn");
+            }
+        }
+        window.onscroll = function() {
+            returnTop();
+        }
     });
 
 }

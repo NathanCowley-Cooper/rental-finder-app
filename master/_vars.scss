@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box; 
+}
+  
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+// @Colours --------------------------------------------------------------------
+
+$light-black:               #404040;
+$light-grey:                #F0F0F0;
+$dark-grey:                #979797; 
+$paragraph:                #404040;
+
+$rental-red:            #b82026;
+$rental-black:          #1b1d1f;
+$rental-grey:           #404040;
+
+// @Fonts ----------------------------------------------------------------------
+$poppins: 'Poppins', sans-serif;;
+$base-font-family:  $poppins;
+$heading-font-family: $poppins;
+$nav-font-family: $poppins;
+
+// @Font-size, line-height & spacing
+$base-font-size: 18px;
+$base-line-height: 1.5;
+$base-font-weight: 400;
+
+// @buttons ----------------------------------------------------------------------
+$button-border-radius: 50px;
+$button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+$button-default-margin: 2px;
+$button-default-font-size: 2.5vh;
+
+// @Others --------------------------------------------------------------------
+$standard-border-radius: 15px;

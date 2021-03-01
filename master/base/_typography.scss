@@ -1,0 +1,205 @@
+//Import Styling
+@import '../vars';
+
+// @headings
+h1 {
+  font-family: $heading-font-family;
+  line-height: $base-line-height;
+  font-weight: 600;
+  font-size: 8vh;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 7vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 6.5vh;
+  }
+}
+
+h2{
+  font-family: $heading-font-family;
+  line-height: $base-line-height;
+  font-weight: 500;
+  color: $light-black;
+  font-size: 7.5vh;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 6.5vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 6vh;
+  }
+}
+
+h3{
+  font-family: $heading-font-family;
+  line-height: $base-line-height;
+  font-weight: 300;
+  font-size: 5.5vh;
+  margin: 0;
+  @media only screen and (max-width: 1024px) {
+    font-size: 4.5vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 4vh;
+  }
+}
+
+h4{
+  font-family: $heading-font-family;
+  line-height: $base-line-height;
+  font-weight: 300;
+  font-size: 4vh;
+  @media only screen and (max-width: 1024px) {
+    font-size: 3.5vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3vh;
+  }
+}
+
+h5{
+  font-family: $heading-font-family;
+  line-height: $base-line-height;
+  font-weight: 300;
+  font-size: 2.6vh;
+  @media only screen and (max-width: 1024px) {
+    font-size: 2.4vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2vh;
+  }
+}
+
+h6{
+  font-family: $heading-font-family;
+  line-height: 2;
+  font-weight: 100;
+  font-size: 1.8vh;
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.5vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2vh;
+  }
+}
+
+a{
+  font-family: $nav-font-family;
+  line-height: $base-line-height;
+  font-weight: 200;
+  text-decoration: none;
+  font-size: 20px;
+
+
+  @media only screen and (max-width: 1600px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.login-style{
+  font-size: 2.5vh;
+}
+
+p {
+  font-family: $nav-font-family;
+  font-weight: 200;
+  font-size: 3vh;
+}
+
+
+strong{
+  font-weight: 400;
+}
+
+//Tablet
+
+@media only screen and (max-width: 1024px) {
+ 
+  h1{
+    font-size: 3vh;
+  }
+
+  h2{
+    font-size: 6.5vh;
+  }
+  
+  h3{
+    font-size: 4.5vh;
+  }
+
+  h4{
+    font-size: 2.5vh;
+  }
+
+  h5{
+    font-size: 2.2vh;
+  }
+
+  h6{
+    font-size: 1.5vh;
+  }
+  
+  p {
+    font-size: 1.8vh;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  .login-style{
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+  h1{
+    font-size: 2vh;
+  }
+
+  h2{
+    font-size: 6vh;
+  }
+
+  h3{
+    font-size: 4vh;
+  }
+
+  h4{
+    font-size: 2.5vh;
+  }
+  
+  h5{
+    font-size: 2.5vh;
+  }
+
+  h6{
+    font-size: 1.8vh;
+  }
+
+  p{
+    font-size: 2vh;
+  }
+  
+  a {
+    font-size: 22px;
+  }
+
+  .login-style{
+    font-size: 3.5vh;
+  }
+
+
+}

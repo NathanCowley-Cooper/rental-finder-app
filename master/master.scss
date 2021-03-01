@@ -1,0 +1,17 @@
+// Variables
+@import 'vars';
+
+//my core
+@import 'pages/home.scss';
+@import 'pages/core-styling.scss';
+@import 'pages/rentals.scss';
+@import 'pages/rental-modal.scss';
+
+
+// Base
+@import 'base/typography';
+@import 'base/field.scss';
+@import 'base/buttons.scss';
+@import 'base/nav.scss';
+@import 'base/navResponsive.scss';
+@import 'base/footer.scss';

@@ -9,7 +9,7 @@ function contactPageController(){
         intro: "Get In Touch!",  
     }
     //Load Page Data
-    App.loadPage ('Contact', 'template-page-contact', data, () =>{
+    App.loadPage ('Contact | Rental Finder', 'template-page-contact', data, () =>{
         
         //Render MapBox
         var map = L.mapbox.map('map', 'mapbox.outdoors', {
@@ -34,6 +34,27 @@ function contactPageController(){
             Message.create(contactDataObj);
 
         });
+
+        //Back To Top Button
+        function returnTop(){
+            const btt = document.getElementById('btt');
+            if ( window.pageYOffset > 800 ) {
+                btt.classList.add("active-btn");
+            } else {
+                btt.classList.remove("active-btn");
+            }
+        }
+        window.onscroll = function() {
+            returnTop();
+        }
+
+        //Get Back to Top Button Button
+        const goTopPageBtn = document.querySelector('#btt');
+        //On Click
+        goTopPageBtn.addEventListener('click', () => {
+            //Link to Top
+            window.scrollTo(0, 0);
+        })
     });
 }
 

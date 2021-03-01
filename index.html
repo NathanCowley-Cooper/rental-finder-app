@@ -16,10 +16,13 @@
         <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
         
         <!--Link to Style Sheet-->
-        <link rel="stylesheet" href="dist/dist.css">
+        <link rel="stylesheet" href="dist/all.css">
 
         <!--Link to External Typeface - Muli-->
-        <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet"> -->
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -31,48 +34,58 @@
         <div class="page page-home">
             <!--Page Header-->
             <header class="page-header"></header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+
             <main class="page-content">
                 <!--Hero Image-->
-                <div id= "rental-image-home">
-                    <div id= "home-text">
-                        <h1>{{intro}}</h1>
-                        <h6>{{subHeading}}</h6>
-                        <button class="view-rentalPage-btn button">View Rentals</button>
-                    </div>
-                </div>
+                <section class= "hero-image home">
 
-                <div id= "aboutUs">
-                    <div id= "column_One">
-                        <h1>{{aboutHeading}}</h1>
+                    <div class= "home-text">
+                        <h1>Welcome to Rental Finder</h1>
+                        <p>Click the button below to find a property</p>
+                        <button class="view-rental-page button">View Rentals</button>
+                    </div>
+
+                    <div class="landing-hero"></div>
+
+                </section>
+
+                <section class= "Page-QuickLinks">
+                    <div class= "links">
+                        <div class= "link link-1">
+                            <img src="./Images/home.png" alt="Rentals" class="icon">
+                            <h5>{{pageTitle_1}}</h5>
+                            <h6>Use Rental Finders advanced filter system to search through Rental Finders variety of rental properies.</h6>
+                        </div>
+                        <div class= "link link-2">
+                            <img src="./Images/phone.png" alt="Contact Us" class="icon">
+                            <h5>{{pageTitle_2}}</h5>
+                            <h6>Get in touch with Rental Finders expereinced team to answer any of your questions.</h6>
+                        </div>
+                        <div class= "link link-3">
+                            <img src="./Images/account.png" alt="Create Account" class="icon">
+                            <h5>{{pageTitle_3}}</h5>
+                            <h6>Create an Account and get access to features such as the ability save your favourite rental properties.</h6>
+                        </div>
+                    </div>
+                </section>
+
+            <main class="main-content">
+                <section class= "aboutUs">
+                    <div class= "info">
+                        <h2>{{aboutHeading}}</h2>
                         <p>{{aboutParagraph1}}</p>
                         <p>{{aboutParagraph2}}</p>
                     </div>
-                    <div id= "column_Two">
-                        <img src="{{ aboutUs_Img }}" alt="Rentals" class="aboutUs_Img">
-                    </div>
-                </div>
+                    
+                    <img src="{{ aboutUs_Img }}" alt="Rentals" class="aboutImg">
 
-                <div id= "Page-QuickLinks">
-                    <h1>{{Heading}}</h1>
-                    <div id= "Links">
-                        <div id= "Link_1">
-                            <img src="{{ rentals_icon }}" alt="Rentals" class="page-link">
-                            <h3>{{pageTitle_1}}</h3>
-                        </div>
-                        <div id= "Link_2">
-                            <img src="{{ contact_icon }}" alt="Contact Us" class="page-link">
-                            <h3>{{pageTitle_2}}</h3>
-                        </div>
-                        <div id= "Link_3">
-                            <img src="{{ createAccount_icon }}" alt="Create Account" class="page-link">
-                            <h3>{{pageTitle_3}}</h3>
-                        </div>
-                    </div>
-                </div>
+                </section>
 
-                <div id= "rental-image-login">
-                    <div id= "login-bar">
-                        <h1>Login</h1>
+                <section class= "hero-image login-home">
+                    <div class= "login-bar">
+                        <h4>Login</h4>
                         <!--Login Form-->
                         <form action="" method="post" id="form-login" class = "inline-form">
                             <div class = "field">
@@ -81,21 +94,20 @@
                             <div class = "field">
                                 <input type ="password" class="input" name="password" placeholder ="Password">
                             </div>
-                            <div class = "row_three_home">
+                            <div class = "loginRow">
                                 <div class = "field">
-                                    <input type ="submit" value ="Login" class="button">
+                                    <input type ="submit" value ="Login" class="button login">
                                 </div>
-                                <h2>Click here to <a href="#create-account">Create Account</a></h2>
+                                <p>Click here to  <a href="#create-account">Create Account</a></p>
                             </div>
                         </form>
                     </div>
-                </div>
+                </section>
+
+                <footer class="main--footer"></footer>
+
+            </main>
                 
-                <footer class="page-footer">
-                    <h3>{{Disclaimer}}</h3>
-                    <P>{{Disclaimer_body1}} </P>
-                    <P>{{Disclaimer_body2}}</P>
-                </footer>
 
             </main>
         </div> 
@@ -107,21 +119,26 @@
             <!--Page Header-->
             <header class="page-header">
             </header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+            
             <!--Page Hero-->
             <main class="page-content">
-                <div id= "rental-image-saved">
-                    <div id= "hero-text">
-                        <h1>{{intro}}</h1>
-                        <h6>{{subHeading}}</h6>
+                <div class= "cover rental-image">
+                    <div class= "hero-text">
+                        <h2>{{intro}}</h2>
+                        <p>{{subHeading}}</p>
                     </div>
                 </div>
                 <!--Filter Bar-->
-                <div id= "filter-hero">
-                    <h2>Search Rentals</h2>
+                <div class= "filter-grid">
+                    <h4>Search Rentals</h4>
                     <div id="rentals-list-filters"></div>
                 </div>
                 <!--Load Rentals-->
                 <div id="rentals-list"></div>
+
+                <footer class="main--footer"></footer>
             </main>
         </div> 
 
@@ -132,18 +149,24 @@
         <div class="page page-home">
             <!--Page Header-->
             <header class="page-header"></header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+
             <main class="page-content">
-                <div id= "rental-image-saved">
-                    <!--Hero Image-->
-                    <div id= "hero-text">
-                        <h1>{{intro}}</h1>
-                        <h6>{{subHeading}}</h6>
+                <div class= "cover save-image">
+                    <div class= "hero-text">
+                        <h2>{{intro}}</h2>
+                        <p>{{subHeading}}</p>
                     </div>
                 </div>
                 <!--Load Saved Rentals-->
                 <div id="rentals-list"></div>
+
+                <footer class="main--footer"></footer>
             </main>
         </div> 
+
+        <footer class="main--footer"></footer>
 
     </script>
 
@@ -152,32 +175,29 @@
         <div class="page page-home">
             <!--Page Header-->
             <header class="page-header"></header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+
         <main class="page-content">
             <!--Hero Image-->
-            <div id= "rental-image-contact">
-                <h1 id= "hero-contact-text">{{intro}}</h1>
+            <div class= "cover-center contact-image">
+                <div class= "hero-text-center">
+                    <h2>{{intro}}</h2>
+                </div>
             </div>
             <div class= "page-content-contact">
                 <!--Column One-->
-                <div class="column_one">
-                    <!--Contact Details-->
-                    <div class="contact_details">
-                        <h2>Rental Finder</h2>
-                        <div class="contact_group">
-                            <h4>Phone: (08) 6247 6299</h4>
-                            <h4>Email: info@rental.finder.com.au</h4>
-                        </div>
-                        <h4>Address: 102 Avoca St. Sydney, NSW 2035</h4>
-                        
-                        <!--The div element for the map -->
+                <div class="clm-1">
+                    <!--The div element for the map -->
+                    <div class="map-contact">
                         <div id="map"></div>
                     </div>
                 </div>
                 <!--Column Two-->
-                <div class="column_two">
+                <div class="clm-2">
                     <!--Contact Form-->
                     <div class="contact_form">
-                        <h2>Send Us a Message</h2>
+                        <h4>Send Us a Message</h4>
                         <form action="" method="post" id="form-send-message" class = "inline-form">
                             <div class = "field">
                                 <input type ="text" class="input" name="your_name" placeholder ="Your Name">
@@ -195,12 +215,14 @@
                                 <textarea type = "text" class="input_textbox" id="textbox" name="subject" placeholder="Your Message"></textarea>
                             </div>
                             <div class = "field">
-                                <input type ="submit" value ="Send" class="button">
+                                <input type ="submit" value ="Send" class="send-btn button">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <footer class="main--footer"></footer>
 
         </main>
         </div> 
@@ -212,8 +234,8 @@
             <!--Page Header-->
             <header class="page-header"></header>
             <main class="page-content">
-            <div class="login-page">
-                <h1>Login</h1>
+            <div class="hero-image login-image">
+                <h4>Login</h4>
                 <!--Login Form-->
                 <form action="" method="post" id="form-login" class = "inline-form">
                     <div class = "field">
@@ -222,14 +244,17 @@
                     <div class = "field">
                         <input type ="password" class="input" name="password" placeholder ="Password">
                     </div>
-                    <div class = "row_three">
+                    <div class = "row-three">
                         <div class = "field">
-                            <input type ="submit" value ="Login" class="button">
+                            <input type ="submit" value ="Login" class="login-btn button">
                         </div>
-                        <h1>Click here to <a href="#create-account">Create Account</a></h1>
+                        <p>Click here to <a href="#create-account">Create Account</a></p>
                     </div>
                 </form>
             </div>
+
+            <footer class="main--footer"></footer>
+
 
             </main>
         </div> 
@@ -243,29 +268,29 @@
             <main class="page-content">
                 <!--User Data-->
                 <div class="userProfile">
-                    <div id ="your-profile">
-                        <h1>Your Profile</h1>
+                    <div class ="your-profile">
+                        <h2>Your Profile</h2>
                     </div>
-                    <div id ="myProfile">
-                        <div id ="user">
+                    <div class ="myProfile">
+                        <div class ="user">
                             <img src="{{ myPic }}" alt="User Picture" class="myPic">
-                            <h2 class= "user_name">{{firstName}}</h2>
-                            <h2 class= "user_name">{{lastName}}</h2>
-                            <h2 class= "user_type">GUEST USER</h2>
+                            <h3>{{firstName}}</h3>
+                            <h3>{{lastName}}</h3>
+                            <h5>GUEST USER</h5>
                         </div>
-                        <div id ="userProfileContent">
-                            <div id ="user_row_one">
-                                <h2 class= "Personal_info">Personal Information</h2>
+                        <div class ="userProfileContent">
+                            <div class ="user_row_one">
+                                <h2>Personal Information</h2>
                             </div>
-                            <div id ="user_row_two">
+                            <div class ="user_row_two">
                                 <p>Email: {{email}}</p>
                                 <p>Mobile: {{mobile}}</p>
                             </div>
-                            <div id ="user_row_three">
+                            <div class ="user_row_three">
                                 <p>Date of Birth: {{dob}}</p>
                                 
                             </div>
-                            <div id ="user_row_four"></div>
+                            <div class ="user_row_four"></div>
                         </div>
                     </div>
                 </div>
@@ -282,30 +307,24 @@
         </div>
         <div class="content">
             <div class="row_one">
-            <h3 class="address">{{ address }}</h3>
+            <h5>{{ address }}</h5>
             </div>
             <div class="row_two">
-                <div class="column-1">
-                    <span class = "rental-icon">
-                        <i class="fas fa-bed"></i>
-                    </span>
-                    <div class="info">{{ bedrooms }}</div>
+                <div class="column">
+                    <img src="./Images/bed.png" alt="Create Account" class="rental-icon">
+                    <h5>{{ bedrooms }}</h5>
                 </div>
-                <div class="column-2">
-                    <span class = "rental-icon">
-                        <i class="fas fa-toilet"></i>
-                    </span>
-                    <div class="info">{{ bathrooms }}</div>
+                <div class="column">
+                    <img src="./Images/bath.png" alt="Create Account" class="rental-icon">
+                    <h5>{{ bathrooms }}</h5>
                 </div>
-                <div class="column-3">
-                    <span class = "rental-icon">
-                        <i class="fas fa-car"></i>
-                    </span>
-                    <div class="info">{{ car_spaces }}</div>
+                <div class="column">
+                    <img src="./Images/car.png" alt="Create Account" class="rental-icon">
+                    <h5>{{ car_spaces }}</h5>
                 </div>
             </div>
-            <div class="row_3">
-                <div class="info">${{ price }} Per Week</div>
+            <div class="row_three">
+                <h5>${{ price }} Per Week</h5>
             </div>
 
             <button class="view-rental-btn button">View Rental</button>
@@ -320,52 +339,46 @@
             <img src="{{ cover_image }}" alt="Rental Cover" class="rental-cover-modal">
             <div class="content-modal">
                 <!--Row One-->
-                <div class="modal_row-1">
-                    <h3 class="address">{{ address }}</h3>
+                <div class="modal-row-1">
+                    <h3>{{ address }}</h3>
                 </div>
                 <!--Row Two-->
-                <div class="modal_row-2">
-                    <div class="modal_column-1">
-                        <span class = "rental-icon">
-                            <i class="fas fa-bed"></i>
-                        </span>
-                        <div class="info">{{ bedrooms }}</div>
+                <div class="modal-row-2">
+                    <div class="modal-column-1">
+                        <img src="./Images/bed.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ bedrooms }}</h3>
                     </div>
-                    <div class="modal_column-2">
-                        <span class = "rental-icon">
-                            <i class="fas fa-toilet"></i>
-                        </span>
-                        <div class="info">{{ bathrooms }}</div>
+                    <div class="modal-column-2">
+                        <img src="./Images/bath.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ bathrooms }}</h3>
                     </div>
-                    <div class="modal_column-3">
-                        <span class = "rental-icon">
-                            <i class="fas fa-car"></i>
-                        </span>
-                        <div class="info">{{ car_spaces }}</div>
+                    <div class="modal-column-3">
+                        <img src="./Images/car.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ car_spaces }}</h3>
                     </div>
-                    <div class="modal_column-4">
-                        <div class="info">${{ price }} Per Week</div>
+                    <div class="modal-column-4">
+                        <h3>${{ price }} Per Week</h3>
                     </div>
                 </div>
                 <!--Row Three-->
-                <div class= "modal_row-3">
+                <div class= "modal-row-3">
                     <!--Column One-->
-                    <div class="column_one">
-                        <div class="info">{{ bedrooms}} Bedrooms</div>
-                        <div class="info">{{ bathrooms }} Bathrooms</div>
-                        <div class="info">{{ car_spaces}} Car Spaces</div>
-                        <div class="info">{{ pets_allowed}} Pets Allowed</div>
-                        <div class="info">{{ security_system }} Securtity System</div>
-                        <div class="info">{{ swimming_pool }} Swimming Pool</div>
-                        <div class="info">${{ price }} Per Week</div>
+                    <div class="column-one">
+                        <p>{{ bedrooms}} Bedrooms</p>
+                        <p>{{ bathrooms }} Bathrooms</p>
+                        <p>{{ car_spaces}} Car Spaces</p>
+                        <p>{{ pets_allowed}} Pets Allowed</p>
+                        <p>{{ security_system }} Securtity System</p>
+                        <p>{{ swimming_pool }} Swimming Pool</p>
+                        <p>${{ price }} Per Week</p>
                     </div>
                     <!--Column Two-->
-                    <div class="column_two">
-                        <div class="info">{{ rental_info }}</div>
+                    <div class="column-two">
+                        <p>{{ rental_info }}</p>
                     </div>
                 </div>
-                <div class="map_box">
-                    <!--The div element for the map -->
+                <!--The div element for the map -->
+                <div class="map-modal">
                     <div id="map"></div>
                 </div>
             </div>
@@ -380,8 +393,12 @@
             <header class="page-header"></header>
             <main class="page-content">
                 <div class = "Template_404">
-                    <h1>404 Error</h1>
-                    <h6>Page Not Found. Please us the navigtaion above to redirect back to our pages.</h6>
+                    <div class="template--404">
+                        <h1>404 Error</h1>
+                        <h4>Page Not Found. Please us the navigtaion above to redirect back to our pages.</h4>
+                    </div>
+
+                    <footer class="main--footer"></footer>
                 </div>
             </main>
         </div> 
@@ -394,40 +411,30 @@
             <header class="page-header"></header>
             <main class="page-content">
                 <div class="createAccount-Page">
-                    <div class="contact">
-                    <h1>Create Account</h1>
+                    <div class="hero-image contact-image">
+                    <h4>Create Account</h4>
                     <!--Create Account Form-->
                         <form action="" method="post" id="form-create-account" class = "inline-form">
                             <div class = "createAccount-Column">
-                                <div class = "field">
-                                    <input type ="text" class="input" id ="firstName" name="first_name" placeholder ="First Name">
+                                <div class = "field firstName">
+                                    <input type ="text" class="input firstName" name="first_name" placeholder ="First Name">
                                 </div>
-                                <div class = "field">
-                                    <input type ="text" class="input" id ="lastName" name="last_name" placeholder ="Last Name">
+                                <div class = "field lastName">
+                                    <input type ="text" class="input" name="last_name" placeholder ="Last Name">
                                 </div>
                             </div>
                             <div class = "createAccount-Column">
-                                <div class = "field">
-                                    <input type ="mobile" class="input" id ="mobile" name="mobile" placeholder ="Mobile">
+                                <div class = "field mobile">
+                                    <input type ="mobile" class="input" name="mobile" placeholder ="Mobile">
                                 </div>
-                                <div class = "field">
-                                    <input type ="text" class="input" id ="dob" name="date_of_birth" placeholder ="Date of Birth">
+                                <div class = "field dob">
+                                    <input type ="text" class="input" name="date_of_birth" placeholder ="Date of Birth">
                                 </div>
                             </div>
                             
                             <div class = "field">
                                 <input type ="email" class="input" name="email" placeholder ="Email">
                             </div>
-                            <!--Dropdown Box-->
-                            <fieldset name ="smoker">
-                                <p>
-                                    <select id = "Dropdown" name = "smoker" form = "form-create-account">
-                                        <option value = "" disabled selected hidden>Do You Smoke?</option>
-                                        <option value = true>Yes</option>
-                                        <option value = false>No</option>
-                                    </select>
-                                </p>
-                            </fieldset>
                             <div class = "field">
                                 <input type ="password" class="input" name="password" placeholder ="Password">
                             </div>
@@ -436,12 +443,15 @@
                                 <div class="submit">
                                     <input type="submit" value="Submit" class="button submit-btn">
                                 </div>
-                                <h1>Already have an Account? <a href="#login">Login Here</a></h1>
+                                <p>Already have an Account? <a href="#login">Login Here</a></p>
                             </div>
 
                         </form>
                     </div>
                 </div>
+
+                <footer class="main--footer"></footer>
+
             </main>
         </div>
 

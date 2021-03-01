@@ -1,0 +1,103 @@
+//Import Styling
+@import '../vars';
+
+footer{
+    padding: 7.5% 5%;
+    background-color: $rental-black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    h5{
+        font-weight: 400;
+    }
+}
+
+.active-btn{
+    pointer-events: auto;
+    opacity: 1 !important;
+    
+    animation: fadeIn ease 0.6s;
+    -webkit-animation: fadeIn ease 0.6s;
+    -moz-animation: fadeIn ease 0.6s;
+    -o-animation: fadeIn  ease 0.6s;
+    -ms-animation: fadeIn ease 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.back-to-top{
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+    background-color: $rental-red;
+    color:white;
+    border: 0;
+    padding: 1em 1.2em;
+    opacity: 0;
+
+    &:hover{
+        background-color: $light-black;
+        cursor:pointer;
+        box-shadow: $button-shadow;
+    }
+
+    &:focus {outline:0;}
+}
+
+.footer-row{
+    h5{
+        color:white;
+        text-transform: uppercase;
+    }
+    h6{
+        color:white;
+    }
+
+    a{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.pl{
+    padding-left: 20px;
+}
+
+.pr{
+    padding-right: 20px;
+}
+
+.m-0{
+    margin:0;
+}
+
+.m-2{
+    margin-top:0;
+    margin-bottom:2.3em;
+}
+
+.m-1{
+    margin-top:0;
+    margin-bottom:0.5em;
+}
+
+.flex{
+    display:flex;
+    width:100%;
+}
+
+.align-left{
+    text-align: left;
+    width:100%;
+}
+
+.align-right{
+    text-align: right;
+    width:100%;
+    padding-right: 15px;
+}

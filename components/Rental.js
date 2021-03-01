@@ -190,7 +190,7 @@ const Rental = {
             saveBtn.classList.add('button');
             saveBtn.innerText = "Save Rental";
             //Render to modal_row 1 div
-            let contentDiv = document.querySelector('.rental-modal > .content-modal > .modal_row-1');
+            let contentDiv = document.querySelector('.rental-modal > .content-modal > .modal-row-1');
             contentDiv.appendChild(saveBtn);
             if(User.savRentals.includes(rentalObj.data._id) ){
                 //Get the Sav Button

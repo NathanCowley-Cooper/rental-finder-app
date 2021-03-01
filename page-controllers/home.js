@@ -1,6 +1,5 @@
 //Import  Controllers ------------------------------
 import { App } from '../components/App.js';
-import { Notify } from '../components/notify.js';
 import { Auth } from '../components/Auth.js';
 
 function homePageController(){
@@ -10,12 +9,12 @@ function homePageController(){
         subHeading: "Click the button below to find a property",    
         
         Heading:"Lets Get Started!",
-        pageTitle_1:"SERACH RENTALS",
-        pageTitle_2:"CONTACT US",
-        pageTitle_3:"CREATE ACCOUNT",
-        rentals_icon: "images/rental-icon.png",
-        contact_icon: "images/contact-icon.png",
-        createAccount_icon: "images/createAccount-icon.png",
+        pageTitle_1:"Search Rentals",
+        pageTitle_2:"Contact Us",
+        pageTitle_3:"Create Account",
+        rentals_icon: "Images/rental-icon.svg",
+        contact_icon: "Images/contact-icon.svg",
+        createAccount_icon: "Images/createAccount-icon.svg",
 
         aboutHeading: "About Us",
         aboutParagraph1: "Rental Finder is a rental company providing you with various property solutions. We have a large database of rental houses and apartment properties around Australia. ",
@@ -27,11 +26,12 @@ function homePageController(){
         Disclaimer_body2: "No part of this work may be reproduced without consent of the original copyright owners. See code comments for references."
 
     }
+
     //Load Page Data
-    App.loadPage ('Home', 'template-page-home', data, () =>{
-        
+    App.loadPage ('Home | Welcome to Rental Finder', 'template-page-home', data, () =>{
+
     //Get View Rental Button
-    const viewRentalPageBtn = document.querySelector('.view-rentalPage-btn');
+    const viewRentalPageBtn = document.querySelector('.view-rental-page');
     //On Click
         viewRentalPageBtn.addEventListener('click', () => {
             //Link to Rental Page
@@ -39,7 +39,7 @@ function homePageController(){
         })
 
     //View Rental Page
-    const viewRentalPage = document.querySelector('#Link_1');
+    const viewRentalPage = document.querySelector('.link-1');
     //On Click
     viewRentalPage.addEventListener('click', () => {
         //Link to Rental Page
@@ -47,14 +47,14 @@ function homePageController(){
     })
 
     //View Contact page
-    const viewContactPage = document.querySelector('#Link_2');
+    const viewContactPage = document.querySelector('.link-2');
     //On Click
     viewContactPage.addEventListener('click', () => {
         //Link to Rental Page
         location.href = "#contact";
     })
     //View Contact page
-    const viewCreateaccountPage = document.querySelector('#Link_3');
+    const viewCreateaccountPage = document.querySelector('.link-3');
     //On Click
     viewCreateaccountPage.addEventListener('click', () => {
         //Link to Rental Page
@@ -80,42 +80,65 @@ function homePageController(){
 
     });
 
+    //Back To Top Button
+    function returnTop(){
+        const btt = document.getElementById('btt');
+        if ( window.pageYOffset > 800 ) {
+            btt.classList.add("active-btn");
+        } else {
+            btt.classList.remove("active-btn");
+        }
+    }
+    window.onscroll = function() {
+        returnTop();
+    }
+
+    //Get Back to Top Button Button
+    const goTopPageBtn = document.querySelector('#btt');
+    //On Click
+    goTopPageBtn.addEventListener('click', () => {
+        //Link to Top
+        window.scrollTo(0, 0);
+    })
+
     //GSAP Animations-----------------------------
     //heading slide in----------------------------
     const tl = gsap.timeline()
-    tl.from('#home-text', {y: 200, opacity: 0, duration: 1, ease: "power2"}, 0.5);
+    tl.from('.home-text', {y: 200, opacity: 0, duration: 1, ease: "power2"}, 0.5);
     
     //About Me------------------------------------
     const aboutTl = gsap.timeline({
         scrollTrigger: {
-            trigger: "#aboutUs",
+            trigger: ".aboutUs",
             start: "center bottom",
         }
     });
-    aboutTl.from('#column_One', {y: 200, opacity: 0, duration: 1, ease: "power2"})
-    aboutTl.from('.aboutUs_Img', {x: 900, opacity: 1, duration: 1, ease: "power2"})
+    aboutTl.from('.info', {y: 200, opacity: 0, duration: 0.75, ease: "power2"})
+    aboutTl.from('.aboutImg', {x: 300, opacity: 0, duration: 0.75, ease: "power2"})
 
     //Quick Links-----------------------------------
     const linkTl = gsap.timeline({
         scrollTrigger: {
-            trigger: "#Page-QuickLinks",
+            trigger: ".Page-QuickLinks",
             start: "center bottom",
         }
     });
-    linkTl.from('#Link_1', {y: 200, opacity: 0, duration: 0.6, ease: "power2"})
-    linkTl.from('#Link_2', {y: 200, opacity: 0, duration: 0.6, ease: "power2"})
-    linkTl.from('#Link_3', {y: 200, opacity: 0, duration: 0.6, ease: "power2"})
+    linkTl.from('.link-1', {y: 300, opacity: 0, duration: 0.5, ease: "power2"})
+    linkTl.from('.link-2', {y: 300, opacity: 0, duration: 0.5, ease: "power2"})
+    linkTl.from('.link-3', {y: 300, opacity: 0, duration: 0.5, ease: "power2"})
 
     //Login------------------------------------
     const loginTl = gsap.timeline({
         scrollTrigger: {
-            trigger: "#rental-image-login",
+            trigger: ".login-home",
             start: "center bottom",
         }
     });
-    loginTl.from('#login-bar', {y: 200, opacity: 0, duration: 1, ease: "power2"})
+    loginTl.from('.login-bar', {y: 200, opacity: 0, duration: 1, ease: "power2"})
 
     }); 
+
+    
 
 }
 

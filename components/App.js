@@ -1,13 +1,13 @@
 //Import Componenets
 import { Notify } from "./notify.js";
-import { User } from "./User.js";
+
 import { Auth } from "./Auth.js";
 
 //Create Appp Compnenet
 const App = {
     //Properties
     name: "Rental Finder App",
-    version: "1.0.0",
+    version: "2.0.0",
     author: "Nathan Cowley-Cooper",
     rootEl: document.querySelector("#app"),
     routes: {},
@@ -60,7 +60,9 @@ const App = {
         setTimeout(function(){
             App.rootEl.innerHTML = output;
             App.rootEl.className = '';
+            window.scrollTo(0, 0);
             App.loadNav();
+            App.loadFooter();
             //run callback
             if(typeof callback== 'function'){
                 callback();
@@ -96,38 +98,161 @@ const App = {
         let navAnchor = document.createElement('nav');
         navAnchor.id='main-nav';
         header.appendChild(navAnchor);
-        
-        //Main Nav Menu Headings
-        let mainNav = document.querySelector('#main-nav');
-        mainNav.innerHTML = `
+
+        //Create Mobile Burger Menu
+        let burger = document.createElement('div');
+        burger.className='burger';
+        header.appendChild(burger);
+
+        //Create Nav List
+        let ul = document.createElement('ul');
+        ul.className='list';
+        navAnchor.appendChild(ul);
+
+        ul.innerHTML = `
         <a href="#">Home</a>
         <a href="#rentals">Rentals</a>
         <a href="#contact">Contact</a>`;
         if(Auth.authenticated){
             //Signed In - Show item Favourites, Profile & Sign Out
-            mainNav.innerHTML +=`
+            ul.innerHTML +=`
             <a href="#saved-rentals" id = "nav-item-saved" >Saved Rentals</a>
             <a href="#user-profile" >My Profile</a>
-            <a href="#logout" >Logout</a>`;
+            <button class="logout-btn button login-style">Logout</button>`;
+
+        //Login------------------
+            const logoutPageBtn = document.querySelector('.logout-btn');
+        //On Click
+            logoutPageBtn.addEventListener('click', () => {
+            //Link to Login Page
+                location.href = "#logout";
+            })
         }else{
             //Not Signed In - Show Sign Up & Sign In
-            mainNav.innerHTML +=`
+            ul.innerHTML +=`
             <a href="#create-account">Create Account</a>
-            <a href="#login">Login</a>`;
+            <button class="authenticate-btn button login-style">Login</button>`;
+
+            //Login------------------
+            const loginPageBtn = document.querySelector('.authenticate-btn');
+            //On Click
+            loginPageBtn.addEventListener('click', () => {
+                //Link to Login Page
+                location.href = "#login";
+            })
         };
+
+        burger.innerHTML = `
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>`;
+
+
         App.refreshNav();
+        App.navSlide();
     },
+
+    loadFooter: () => {
+        //grab the template
+        let footer = document.querySelector('.main--footer');
+
+        footer.innerHTML = `
+
+            <div class="footer-row pr pl">
+                <h5>Website Disclaimer</h5>
+                <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
+                </h6>
+                <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+                </h6>
+            </div>
+
+            <div class="footer-row pl pr">
+                <h5>Contact</h5>
+
+                    <h6 class="m-0">Phone: (08) 6247 6299</h6>
+                    <h6 class="m-2">Email: info@rental.finder.com.au</h6>
+
+                    <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
+
+            </div>
+
+            <div class="footer-row pl pr">
+                <h5>Links</h5>
+                <a href="#rentals"><h6 class="m-1">Rental Properties</h6> </a>
+                <a href="#contact"><h6 class="m-1">Contact Us</h6> </a>
+                <a href="#create-account"><h6 class="m-1">Create Account</h6> </a>
+                <a href="#login"><h6 class="m-1">Login</h6> </a>
+            </div>
+
+            <div class="footer-row pl pr">
+                <h5>Info</h5>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Monday:</h6>
+                    <h6 class="m-1 align-right">8am-5pm</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Tuesday:</h6>
+                    <h6 class="m-1 align-right">8am-5pm</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Wednesday:</h6>
+                    <h6 class="m-1 align-right">8am-5pm</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Thursday:</h6>
+                    <h6 class="m-1 align-right">8am-5pm</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Friday:</h6>
+                    <h6 class="m-1 align-right">8am-5pm</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Saturday:</h6>
+                    <h6 class="m-1 align-right">CLOSED</h6>
+                </div>
+                <div class="flex">
+                    <h6 class="m-1 align-left">Sunday:</h6>
+                    <h6 class="m-1 align-right">CLOSED</h6>
+                </div>
+            </div>`;
+
+
+    },
+
+    //Nav Menu Hamburger Setup
+    navSlide: () =>{
+        //Define Links
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('#main-nav');
+        const navLinks = document.querySelectorAll('#main-nav a');
+
+        burger.addEventListener('click', () =>{
+            //Open Nav Menu
+            nav.classList.toggle('open');
+            
+            //Menu Links Animation
+            navLinks.forEach(a => {
+                a.classList.toggle('fade')
+            });
+
+        //Burger Animation
+        burger.classList.toggle('toggle');
+    });
+        
+    },
+    
 
     refreshNav: () => {
         //get the current path
         let currentPath = location.hash || '#';
-        let navItems = document.querySelectorAll('#main-nav > a')
+        let navItems = document.querySelectorAll('#main-nav > ul > a')
         navItems.forEach((navLink) => {
             if(navLink.getAttribute('href') == currentPath){
                 navLink.classList.add('active');
             }
         });
     },  
+
 }
 
 

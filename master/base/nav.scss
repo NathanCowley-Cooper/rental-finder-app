@@ -1,0 +1,72 @@
+//Import Styling
+@import '../vars';
+
+body{
+  overflow-x: hidden;
+}
+
+/* ==========WEBSITE HEADER============= */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  padding: 0 5%;
+  // box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  // background-color: white; 
+}
+
+/* ==========NAV BAR STYLING============= */
+#main-nav {
+  a {
+    color:  $rental-black;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 200;
+  }
+}
+
+#main-nav a.active {
+  font-weight: 500;
+  color: $rental-red;
+}
+
+/* ==========LOGO============= */
+/* LOGO FADE-IN */
+.logo-img {
+  height: 95px;
+  width: auto;
+  justify-items: flex-start; }
+
+//Burger Styling
+.burger{
+  display:none;
+}
+
+.burger div{
+  width:25px;
+  height:2px;
+  background-color: $rental-black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1{
+  transform:rotate(-45deg) translate(-5px, 6px);
+  background-color: white;
+}
+
+.toggle .line2{
+  opacity:0;
+}
+
+.toggle .line3{
+  transform:rotate(45deg) translate(-5px, -6px);
+  background-color: white;
+}
+
+

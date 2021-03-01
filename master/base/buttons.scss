@@ -1,0 +1,180 @@
+//Import Styling
+@import '../vars';
+
+//Buttons//
+
+.button {
+    display: inline-block;
+    padding: 0.6em 2em;
+    text-decoration: none;
+    margin: $button-default-margin;
+    // border-radius:$button-border-radius;
+    font-family: $base-font-family;
+    font-size: 15px;
+    border: none;
+    transform: scale(1.05); 
+    transition: transform .5s ease;
+    width:fit-content;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer; 
+
+    &:hover {
+        background:  $rental-black; 
+    }
+}
+
+button:focus {
+    outline: none;
+    outline-offset: -4px;
+}
+
+.submit-btn{
+    background: $rental-red;
+    color: #fff;
+    &:hover{
+        background: $rental-black;
+    color: #fff;
+    }
+}
+
+.view-rental-page{
+    margin-top: 5%;
+    background: $rental-red;
+    color: #fff;
+}
+
+.view-rental-btn{
+    margin: 5% 0;
+    background: $rental-red;
+    color: #fff;
+}
+
+.sav-btn{
+    background: $rental-red;
+    color: #fff;
+    // padding:0.5em;
+    &:hover{
+        background: $rental-black;
+    color: #fff;
+    }
+}
+
+.send-btn{
+    background: $rental-red;
+    color: #fff;
+    &:hover{
+        background: $rental-black;
+        color: #fff;
+    }
+}
+
+.login-btn{
+    background: $rental-red;
+    color: #fff;
+    &:hover{
+        background: $rental-black;
+        color: #fff;
+    }
+}
+
+.edit-btn{
+    background: white;
+    color:  $rental-black;
+    border: 1px solid $rental-black;
+    &:hover{
+      background: $rental-red;
+      border: 1px solid$rental-red;
+      color: white;
+    }
+  }
+  .delete-btn{
+    background: $rental-black;
+    color:  white;
+    margin-left:2em;
+    &:hover{
+        background: $rental-red;
+        color:  white;
+    }
+  }
+
+
+.login-style{
+    background: $rental-red;
+    color: #fff;
+    display: inline-block;
+    // padding: 0.6em 1.5em;
+    text-decoration: none;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer; 
+
+    .hover {
+        background:  $rental-black; 
+    }
+}
+
+//Filter Button
+.filter-btn {
+    background: white;
+    border: 2px solid white !important;
+    color:#1f1f1f;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px !important;
+    &:hover{
+        border: 2px solid #b82026 !important;
+        background: white;
+        color:#b82026;
+    }
+}
+  
+  .filter-btn.is-active {
+    border: 2px solid $rental-red !important;
+    background-color: $rental-red;
+    color:white;
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    background: #eee;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    outline: none;
+    font-size: 2.5vh;
+  
+    &:hover{
+    background: #b82026;
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform .5s ease;
+  }
+}
+
+
+
+//Desktop
+
+@media only screen and (max-width: 1024px) {
+
+    .button{
+        font-size: 20px;
+    }
+}
+  
+//Tablet
+  
+@media only screen and (max-width: 768px) {
+    .button{
+        font-size: 22px;
+    }
+}

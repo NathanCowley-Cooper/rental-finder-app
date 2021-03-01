@@ -16,7 +16,7 @@ function rentalsPageController(){
     }
 
     //Load Page Data
-    App.loadPage('Rentals', 'template-page-rentals', data, () => {
+    App.loadPage('Rental Properties | Rental Finder', 'template-page-rentals', data, () => {
         //get #divs rentals list
         const rentalsListDiv = document.querySelector('#rentals-list');
 
@@ -66,6 +66,27 @@ function rentalsPageController(){
         })
         .catch(err => {
             console.log(err);
+        })
+
+        //Back To Top Button
+        function returnTop(){
+            const btt = document.getElementById('btt');
+            if ( window.pageYOffset > 800 ) {
+                btt.classList.add("active-btn");
+            } else {
+                btt.classList.remove("active-btn");
+            }
+        }
+        window.onscroll = function() {
+            returnTop();
+        }
+
+        //Get Back to Top Button Button
+        const goTopPageBtn = document.querySelector('#btt');
+        //On Click
+        goTopPageBtn.addEventListener('click', () => {
+            //Link to Top
+            window.scrollTo(0, 0);
         })
 
         //Create a Clear Filters Button
