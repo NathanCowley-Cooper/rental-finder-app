@@ -35,7 +35,7 @@ const App = {
         if(route){
             //run the route.controller
             route.controller();
-            console.log(err);
+            
         }
         else{
             //load 404 Page

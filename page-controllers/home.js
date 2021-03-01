@@ -113,8 +113,8 @@ function homePageController(){
             start: "center bottom",
         }
     });
-    aboutTl.from('.info', {y: 200, opacity: 0, duration: 0.75, ease: "power2"})
-    aboutTl.from('.aboutImg', {x: 300, opacity: 0, duration: 0.75, ease: "power2"})
+    aboutTl.from('.info', {y: 200, opacity: 0, duration: 0.5, ease: "power2"})
+    aboutTl.from('.aboutImg', {x: 300, opacity: 0, duration: 0.5, ease: "power2"})
 
     //Quick Links-----------------------------------
     const linkTl = gsap.timeline({

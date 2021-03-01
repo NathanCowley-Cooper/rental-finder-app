@@ -32,17 +32,19 @@
     <!--Home Page Template-->
     <script type="text/template" id="template-page-home">
         <div class="page page-home">
-            <!--Page Header-->
+            <main class="page-content">
+
+            <main class="main-content">
+
+                <!--Page Header-->
             <header class="page-header"></header>
 
             <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
-
-            <main class="page-content">
                 <!--Hero Image-->
                 <section class= "hero-image home">
 
                     <div class= "home-text">
-                        <h1>Welcome to Rental Finder</h1>
+                        <h2>Welcome to Rental Finder</h2>
                         <p>Click the button below to find a property</p>
                         <button class="view-rental-page button">View Rentals</button>
                     </div>
@@ -53,32 +55,32 @@
 
                 <section class= "Page-QuickLinks">
                     <div class= "links">
-                        <div class= "link link-1">
+                        <div class= "quick--link link-1">
                             <img src="./Images/home.png" alt="Rentals" class="icon">
                             <h5>{{pageTitle_1}}</h5>
                             <h6>Use Rental Finders advanced filter system to search through Rental Finders variety of rental properies.</h6>
                         </div>
-                        <div class= "link link-2">
+                        <div class= "quick--link link-2">
                             <img src="./Images/phone.png" alt="Contact Us" class="icon">
                             <h5>{{pageTitle_2}}</h5>
                             <h6>Get in touch with Rental Finders expereinced team to answer any of your questions.</h6>
                         </div>
-                        <div class= "link link-3">
+                        <div class= "quick--link link-3">
                             <img src="./Images/account.png" alt="Create Account" class="icon">
                             <h5>{{pageTitle_3}}</h5>
                             <h6>Create an Account and get access to features such as the ability save your favourite rental properties.</h6>
                         </div>
                     </div>
                 </section>
-
-            <main class="main-content">
+                
                 <section class= "aboutUs">
+
                     <div class= "info">
                         <h2>{{aboutHeading}}</h2>
                         <p>{{aboutParagraph1}}</p>
                         <p>{{aboutParagraph2}}</p>
                     </div>
-                    
+
                     <img src="{{ aboutUs_Img }}" alt="Rentals" class="aboutImg">
 
                 </section>
@@ -394,7 +396,7 @@
             <main class="page-content">
                 <div class = "Template_404">
                     <div class="template--404">
-                        <h1>404 Error</h1>
+                        <h2>404 Error</h2>
                         <h4>Page Not Found. Please us the navigtaion above to redirect back to our pages.</h4>
                     </div>
 
