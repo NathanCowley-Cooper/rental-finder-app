@@ -35,6 +35,7 @@ const App = {
         if(route){
             //run the route.controller
             route.controller();
+            console.log(err);
         }
         else{
             //load 404 Page
@@ -63,7 +64,6 @@ const App = {
             window.scrollTo(0, 0);
             App.loadNav();
             App.loadFooter();
-            console.log("Page Loaded");
             //run callback
             if(typeof callback== 'function'){
                 callback();
