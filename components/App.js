@@ -63,6 +63,7 @@ const App = {
             window.scrollTo(0, 0);
             App.loadNav();
             App.loadFooter();
+            console.log("Page Loaded");
             //run callback
             if(typeof callback== 'function'){
                 callback();
