@@ -1,6 +1,6 @@
 //Import Components
 import{ App } from "./App.js";
-// import anime from './../node_modules/animejs/lib/anime.es.js';
+import anime from './../node_modules/animejs/lib/anime.es.js';
 
 //Create Notify component
 const Notify = {
@@ -26,18 +26,18 @@ const Notify = {
         Notify.container.appendChild(notificationsEntryDiv);
 
         //animatie notificationEntryDiv using anime.js
-        // anime({
-        //     targets: notificationsEntryDiv,
-        //     keyframes:[
-        //         { opacity: 0, top: '50px', duration: 0},
-        //         { opacity: 1, top: 0, duration: 600, endDelay: Notify.showDuration},
-        //         { opacity: 0, top: '-50px', duration: 600},
-        //     ],
-        //     //Notification Removes
-        //     complete: () =>{
-        //         notificationsEntryDiv.remove();
-        //     }
-        //   });
+        anime({
+            targets: notificationsEntryDiv,
+            keyframes:[
+                { opacity: 0, top: '50px', duration: 0},
+                { opacity: 1, top: 0, duration: 600, endDelay: Notify.showDuration},
+                { opacity: 0, top: '-50px', duration: 600},
+            ],
+            //Notification Removes
+            complete: () =>{
+                notificationsEntryDiv.remove();
+            }
+          });
 
     },
 
