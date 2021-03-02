@@ -1,6 +1,5 @@
 //Import Componenets
 import { Notify } from "./notify.js";
-
 import { Auth } from "./Auth.js";
 
 //Create Appp Compnenet
