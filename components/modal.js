@@ -1,6 +1,6 @@
 //Import Components
 import{ App } from "./App.js";
-import anime from './../node_modules/animejs/lib/anime.es.js';
+// import anime from './../node_modules/animejs/lib/anime.es.js';
 import { Rental } from "./Rental.js";
 
 //Create Modal Component
@@ -43,13 +43,13 @@ const Modal = {
         App.rootEl.appendChild(modalDiv);
 
         //animate modalDiv entrance using anime.js
-        anime({
-            targets: modalDiv,
-            keyframes: [
-                {opacity: 0, top: '30%', duration: 0},
-                {opacity: 1, top: '0%', duration: 500}
-            ]
-        })
+        // anime({
+        //     targets: modalDiv,
+        //     keyframes: [
+        //         {opacity: 0, top: '30%', duration: 0},
+        //         {opacity: 1, top: '0%', duration: 500}
+        //     ]
+        // })
 
         //add event listener to modalCloseBtn
         modalCloseBtn.addEventListener('click', (e) => {
@@ -79,26 +79,26 @@ const Modal = {
         let modalDiv = document.querySelector('.modal');
 
         //overlayDix exit Animation
-        anime({
-            targets: overlayDiv, 
-            opacity: 0, 
-            duration: 300,
-            easing: 'linear',
-            complete:() => {
-                overlayDiv.remove();
-            }
-        });
+        // anime({
+        //     targets: overlayDiv, 
+        //     opacity: 0, 
+        //     duration: 300,
+        //     easing: 'linear',
+        //     complete:() => {
+        //         overlayDiv.remove();
+        //     }
+        // });
 
-        //modalDiv exit Animation
-        anime({
-            targets: modalDiv, 
-            opacity: 0, 
-            duration: 300,
-            top: '60%',
-            complete:() => {
-                modalDiv.remove();
-            }
-        });
+        // //modalDiv exit Animation
+        // anime({
+        //     targets: modalDiv, 
+        //     opacity: 0, 
+        //     duration: 300,
+        //     top: '60%',
+        //     complete:() => {
+        //         modalDiv.remove();
+        //     }
+        // });
 
         //Stop listening for esc key
         document.removeEventListener('keydown', Modal.modalEscKey);
