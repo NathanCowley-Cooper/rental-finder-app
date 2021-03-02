@@ -60,9 +60,9 @@ const App = {
         setTimeout(function(){
             App.rootEl.innerHTML = output;
             App.rootEl.className = '';
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
             App.loadNav();
-            App.loadFooter();
+            // App.loadFooter();
             //run callback
             if(typeof callback== 'function'){
                 callback();
@@ -152,94 +152,94 @@ const App = {
         App.navSlide();
     },
 
-    loadFooter: () => {
-        //grab the template
-        let footer = document.querySelector('.main--footer');
+    // loadFooter: () => {
+    //     //grab the template
+    //     let footer = document.querySelector('.main--footer');
 
-        footer.innerHTML = `
+    //     footer.innerHTML = `
 
-            <div class="footer-row pr pl">
-                <h5>Website Disclaimer</h5>
-                <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
-                </h6>
-                <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
-                </h6>
-            </div>
+    //         <div class="footer-row pr pl">
+    //             <h5>Website Disclaimer</h5>
+    //             <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
+    //             </h6>
+    //             <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+    //             </h6>
+    //         </div>
 
-            <div class="footer-row pl pr">
-                <h5>Contact</h5>
+    //         <div class="footer-row pl pr">
+    //             <h5>Contact</h5>
 
-                    <h6 class="m-0">Phone: (08) 6247 6299</h6>
-                    <h6 class="m-2">Email: info@rental.finder.com.au</h6>
+    //                 <h6 class="m-0">Phone: (08) 6247 6299</h6>
+    //                 <h6 class="m-2">Email: info@rental.finder.com.au</h6>
 
-                    <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
+    //                 <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
 
-            </div>
+    //         </div>
 
-            <div class="footer-row pl pr">
-                <h5>Links</h5>
-                <a href="#rentals"><h6 class="m-1">Rental Properties</h6> </a>
-                <a href="#contact"><h6 class="m-1">Contact Us</h6> </a>
-                <a href="#create-account"><h6 class="m-1">Create Account</h6> </a>
-                <a href="#login"><h6 class="m-1">Login</h6> </a>
-            </div>
+    //         <div class="footer-row pl pr">
+    //             <h5>Links</h5>
+    //             <a href="#rentals"><h6 class="m-1">Rental Properties</h6> </a>
+    //             <a href="#contact"><h6 class="m-1">Contact Us</h6> </a>
+    //             <a href="#create-account"><h6 class="m-1">Create Account</h6> </a>
+    //             <a href="#login"><h6 class="m-1">Login</h6> </a>
+    //         </div>
 
-            <div class="footer-row pl pr">
-                <h5>Info</h5>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Monday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Tuesday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Wednesday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Thursday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Friday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Saturday:</h6>
-                    <h6 class="m-1 align-right">CLOSED</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Sunday:</h6>
-                    <h6 class="m-1 align-right">CLOSED</h6>
-                </div>
-            </div>`;
+    //         <div class="footer-row pl pr">
+    //             <h5>Info</h5>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Monday:</h6>
+    //                 <h6 class="m-1 align-right">8am-5pm</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Tuesday:</h6>
+    //                 <h6 class="m-1 align-right">8am-5pm</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Wednesday:</h6>
+    //                 <h6 class="m-1 align-right">8am-5pm</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Thursday:</h6>
+    //                 <h6 class="m-1 align-right">8am-5pm</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Friday:</h6>
+    //                 <h6 class="m-1 align-right">8am-5pm</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Saturday:</h6>
+    //                 <h6 class="m-1 align-right">CLOSED</h6>
+    //             </div>
+    //             <div class="flex">
+    //                 <h6 class="m-1 align-left">Sunday:</h6>
+    //                 <h6 class="m-1 align-right">CLOSED</h6>
+    //             </div>
+    //         </div>`;
 
 
-    },
+    // },
 
     //Nav Menu Hamburger Setup
-    navSlide: () =>{
-        //Define Links
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('#main-nav');
-        const navLinks = document.querySelectorAll('#main-nav a');
+    // navSlide: () =>{
+    //     //Define Links
+    //     const burger = document.querySelector('.burger');
+    //     const nav = document.querySelector('#main-nav');
+    //     const navLinks = document.querySelectorAll('#main-nav a');
 
-        burger.addEventListener('click', () =>{
-            //Open Nav Menu
-            nav.classList.toggle('open');
+    //     burger.addEventListener('click', () =>{
+    //         //Open Nav Menu
+    //         nav.classList.toggle('open');
             
-            //Menu Links Animation
-            navLinks.forEach(a => {
-                a.classList.toggle('fade')
-            });
+    //         //Menu Links Animation
+    //         navLinks.forEach(a => {
+    //             a.classList.toggle('fade')
+    //         });
 
-        //Burger Animation
-        burger.classList.toggle('toggle');
-    });
+    //     //Burger Animation
+    //     burger.classList.toggle('toggle');
+    // });
         
-    },
+    // },
     
 
     refreshNav: () => {
