@@ -432,6 +432,18 @@
                             <div class = "field">
                                 <input type ="email" class="input" name="email" placeholder ="Email">
                             </div>
+
+                            <!--Dropdown Box-->
+                            <fieldset name ="smoker">
+                                <p>
+                                    <select id = "Dropdown" name = "smoker" form = "form-create-account">
+                                        <option value = "" disabled selected hidden>Do You Smoke?</option>
+                                        <option value = true>Yes</option>
+                                        <option value = false>No</option>
+                                    </select>
+                                </p>
+                            </fieldset>
+
                             <div class = "field">
                                 <input type ="password" class="input" name="password" placeholder ="Password">
                             </div>
@@ -452,96 +464,6 @@
             </main>
         </div>
 
-    </script> 
-
-    <!--Add Rental Template-->
-    <script type="text/template" id="template-page-add-rental">
-        <div class="page page-home">
-            <!--Page Header-->
-            <header class="page-header"></header>
-            <main class="page-content">
-                <div class="addRental-Page">
-                    <div class="contact">
-                    <h1>Add your own Rental!</h1>
-                    <!--Add Rental Form-->
-                    <form action="" method="post" id="form-add-rental" class = "inline-form">
-                                <div class = "field">
-                                    <input type ="text" class="input" name="address" placeholder ="Address">
-                                </div>
-                                <div class = "addRental-Column">
-                                    <div class = "field">
-                                        <input type ="number" class="input" id ="bedrooms" name="bedrooms" placeholder ="Bedrooms">
-                                    </div>
-                                    <div class = "field">
-                                        <input type ="number" class="input" id ="bathrooms" name="bathrooms" placeholder ="Bathrooms">
-                                    </div>
-                                </div>
-                                <div class = "addRental-Column">
-                                    <div class = "field">
-                                        <input type ="number" class="input" id ="carSpaces" name="car_spaces" placeholder ="Car Spaces">
-                                    </div>
-                                    <div class = "field">
-                                        <input type ="number" class="input" id ="price" name="price" placeholder ="Price P/W">
-                                    </div>
-                                </div>
-                                <div class = "addRental-Column">
-                                    <!--Dropdown Box-->
-                                    <fieldset name ="availability" id="available">
-                                        <p>
-                                            <select id = "Dropdown-1" name = "availability" form = "form-add-rental">
-                                                <option value = "" disabled selected hidden>Is the Rental Currently Available</option>
-                                                <option value = true>Yes</option>
-                                                <option value = false>No</option>
-                                            </select>
-                                        </p>
-                                    </fieldset>
-                                    <!--Dropdown Box-->
-                                    <fieldset name ="pets_allowed" id="pets">
-                                        <p>
-                                            <select id = "Dropdown-2" name = "pets_allowed" form = "form-add-rental">
-                                                <option value = "" disabled selected hidden>Are Pets Allowed?</option>
-                                                <option value = true>Yes</option>
-                                                <option value = false>No</option>
-                                            </select>
-                                        </p>
-                                    </fieldset>
-                                </div>
-                                <div class = "addRental-Column">
-                                    <!--Dropdown Box-->
-                                    <fieldset name ="swimming_pool" id="pool">
-                                        <p>
-                                            <select id = "Dropdown-3" name = "swimming_pool" form = "form-add-rental">
-                                                <option value = "" disabled selected hidden>Do You Have A Pool?</option>
-                                                <option value = true>Yes</option>
-                                                <option value = false>No</option>
-                                            </select>
-                                        </p>
-                                    </fieldset>
-                                    <!--Dropdown Box-->
-                                    <fieldset name ="security_system" id="security">
-                                        <p>
-                                            <select id = "Dropdown-4" name = "security_system" form = "form-add-rental">
-                                                <option value = "" disabled selected hidden>Do You Have A Security System?</option>
-                                                <option value = true>Yes</option>
-                                                <option value = false>No</option>
-                                            </select>
-                                        </p>
-                                    </fieldset>
-                                </div>
-                                <div class = "field">
-                                    <input type ="url" class="input" name="cover_image" placeholder ="Link to House Image">
-                                </div>
-                                <div class = "field">
-                                    <textarea type = "text" class="input_textbox" id="textbox_small" name="rental_info" placeholder="Further Rental Details"></textarea>
-                                </div>
-                        <div class = "field">
-                            <input type ="submit" value ="Create Rental" class="button">
-                        </div>
-                    </form>
-                    </div>
-                </div>
-            </main>
-        </div> 
     </script> 
 
         <!--MapBox External JS Links-->
