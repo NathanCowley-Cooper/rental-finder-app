@@ -163,8 +163,8 @@ p {
     background-color: #1f1f1f; }
 
 .loginRow {
-  display: grid;
-  grid-template-columns: 40% 60%; }
+  display: flex;
+  flex-direction: row; }
   .loginRow p {
     color: #1f1f1f;
     font-family: 'Muli', sans-serif;
@@ -179,8 +179,7 @@ p {
     font-size: 14px;
     font-weight: 600; }
   .loginRow .field {
-    margin-bottom: 0em;
-    width: 100%; }
+    margin-bottom: 0em; }
 
 @media screen and (max-width: 1025px) {
   .aboutUs {
@@ -269,7 +268,7 @@ html, body {
   align-items: center; }
 
 .cover {
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -410,13 +409,13 @@ html, body {
   grid-column: 3; }
 
 .row_six {
-  display: grid;
-  grid-template-columns: 25% 1fr; }
+  display: flex;
+  flex-direction: row; }
   .row_six p {
     font-family: 'Muli', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    margin: 0;
+    margin: 0 0 0 1em;
     align-self: center; }
   .row_six a {
     color: #1b1d1f;
@@ -449,8 +448,8 @@ html, body {
   font-weight: 400; }
 
 .row-three {
-  display: grid;
-  grid-template-columns: 30% 1fr; }
+  display: flex;
+  flex-direction: row; }
   .row-three p {
     font-family: 'Muli', sans-serif;
     font-size: 16px;
@@ -802,7 +801,7 @@ a {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2.5vh; }
   @media only screen and (max-width: 1600px) {
     p {
