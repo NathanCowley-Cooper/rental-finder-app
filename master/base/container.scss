@@ -1,0 +1,32 @@
+//Import Styling
+@import '../vars';
+
+.container{
+    max-width:1600px;
+    padding:0 5%;
+    margin: 0 auto;
+  
+    @media only screen and (max-width: 1800px) {
+      max-width:1220px;
+    }
+  
+    @media only screen and (max-width: 768px) {
+      max-width:90%;
+      padding: 0 60px;
+    }
+}
+
+// .container-1800{
+//     max-width:160px;
+//     padding:0 5%;
+//     margin: 0 auto;
+  
+//     @media only screen and (max-width: 1700px) {
+//       max-width:1440px;
+//     }
+  
+//     @media only screen and (max-width: 768px) {
+//       padding: 0 10%;
+//     }
+// }
+  

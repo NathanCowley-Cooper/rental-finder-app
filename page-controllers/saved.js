@@ -8,7 +8,7 @@ import { User } from '../components/User.js';
 function savedPageController(){
     //Insert Data Using Moustache
     let data = {
-        intro: "Saved Rentals",
+        intro: "Saved Rental Houses",
         subHeading: "View your Saved Rentals Below!"      
     }
 

@@ -7,7 +7,7 @@ import { Auth } from '../components/Auth.js';
 function userLoginPageController(){
     
     //Load Page Data
-    App.loadPage ('Login | Rental Finder', 'template-page-login', {}, () =>{
+    App.loadPage ('Sign In | Rental Finder', 'template-page-login', {}, () =>{
         //get sign up form
         //get sign up form
         let loginForm = document.querySelector('#form-login');

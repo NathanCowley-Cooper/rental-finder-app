@@ -12,7 +12,7 @@ function createAccountPageController(){
     }
     
     //Load Page Data
-    App.loadPage ('Create Account | Rental Finder', 'template-createAccount', {}, signUpEvent )
+    App.loadPage ('Sign Up | Rental Finder', 'template-createAccount', {}, signUpEvent )
 }
 
 function signUpEvent() {

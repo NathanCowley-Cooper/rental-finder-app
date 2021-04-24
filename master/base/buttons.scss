@@ -5,14 +5,13 @@
 
 .button {
     display: inline-block;
-    padding: 0.6em 2em;
+    padding: 0.8em 2em;
     text-decoration: none;
-    margin: $button-default-margin;
     // border-radius:$button-border-radius;
     font-family: $base-font-family;
     font-size: 15px;
     border: none;
-    transform: scale(1.05); 
+    border-radius: 2px;
     transition: transform .5s ease;
     width:fit-content;
 
@@ -43,12 +42,28 @@ button:focus {
     margin-top: 5%;
     background: $rental-red;
     color: #fff;
+    padding: 1em 0em 1em 2em;
+
+    &:hover {
+        .float-right{
+          margin: 0 1.6em 0 1.6em;
+          transition: ease-in 0.3s;
+        }
+    }
 }
 
-.view-rental-btn{
-    margin: 5% 0;
+//Button Arrow
+.float-right{
+    margin: 0 2em 0 1.2em;
+}
+
+.view-rental-modal-btn{
+    margin: 5%;
     background: $rental-red;
+    border:2.5px solid $rental-red;
     color: #fff;
+    padding: 0.6em 0em 0.6em 2em;
+
 }
 
 .sav-btn{
@@ -73,9 +88,24 @@ button:focus {
 .login-btn{
     background: $rental-red;
     color: #fff;
+    width: 100%;
     &:hover{
         background: $rental-black;
         color: #fff;
+    }
+}
+
+.create-account-page{
+    background: #fff;
+    border: 2px solid $rental-red;
+    color: $rental-red;
+    width: 100%;
+
+    &:hover{
+        background: #fff;
+        border: 2px solid $rental-black;
+        color: $rental-black;
+        font-weight: 500;
     }
 }
 
@@ -118,14 +148,16 @@ button:focus {
 //Filter Button
 .filter-btn {
     background: white;
-    border: 2px solid white !important;
     color:#1f1f1f;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    margin-right: 20px !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+    will-change: transform, box-shadow;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+
     &:hover{
-        border: 2px solid #b82026 !important;
-        background: white;
-        color:#b82026;
+        background: $rental-black;
+        color:#fff;
+        box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease; 
     }
 }
   

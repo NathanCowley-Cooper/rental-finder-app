@@ -6,7 +6,7 @@ import { Message } from '../components/contactMessage.js';
 function contactPageController(){
     //Craete Data Using Moustache
     let data = {
-        intro: "Get In Touch!",  
+        intro: "Contact Us",  
     }
     //Load Page Data
     App.loadPage ('Contact | Rental Finder', 'template-page-contact', data, () =>{

@@ -7,7 +7,7 @@ import { Rental } from '../components/Rental.js';
 function rentalsPageController(){
     //Insert Data Using Moustache
     let data = {
-        intro: "Rentals",
+        intro: "Rental Houses",
         subHeading: "View Available Rentals Below!"      
         //firstName: User.firstName,
         //lastName: User.lastName,

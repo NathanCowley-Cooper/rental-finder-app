@@ -2,14 +2,21 @@
 @import '../vars';
 
 footer{
-    padding: 7.5% 5%;
     background-color: $rental-black;
+}
+
+.footer-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 80px;
 
     h5{
         font-weight: 400;
     }
+}
+
+.margin-5{
+    padding: 5% 0;
 }
 
 .active-btn{

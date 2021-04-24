@@ -34,24 +34,29 @@
   p{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color:#56595a;
   }
 
 
 /* ===HERO STYLING=== */
 
 .home {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 60px;
     height: 100%;
     width: 100%;
     z-index: 5;
-    padding: 0 5%;
+    padding: 0;
 }
 
 .landing-hero{
-  background-image: url(../images/hero-image-sqaure.png);
-  background-size: cover;
-  background-position: top right;
+  object-fit: contain;
+  height:85vh;
+  width: auto;
+  padding-top: 40px;
 }
 
 .home-text {
@@ -63,8 +68,6 @@
     }
       
     p {
-        color: $rental-grey;
-        font-weight: 100;
         margin: 0;
     }
 }
@@ -74,8 +77,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     
-    margin: 7.5% 5%;
+    margin: 15% 0;
 
     h2{
         color:  #1f1f1f;
@@ -91,22 +95,19 @@
   
   .info{
     align-self: center;
-    grid-column: 1;
-    padding-right: 15%;
   }
   
   .aboutImg{
-    height: 60vh;
+    height: 50vh;
     width: auto;
     align-self: center;
-    grid-column: 3;
     padding: 0;
   }
 
   
   .Page-QuickLinks{
     
-    margin: 10% 5%;
+    margin: 7.5% 0;
 
     h2{
         color: white;
@@ -121,6 +122,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    gap: 80px;
 
     .icon{
       height: 10vh;
@@ -135,9 +137,9 @@
       align-items: center;
       justify-items: center;
       transform: scale(1);
+      padding: 0 20px;
 
       transition: all 0.3s ease; 
-      padding:2.5% 5%;
   
       &:hover{
         transition: all 0.3s ease; 
@@ -164,9 +166,13 @@
     .login-home{
         background-image: url(../images/home-services.png);
         background-size: cover;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    }
+
+    .login-position{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height:100%;
     }
 
   .login-bar {
@@ -176,14 +182,10 @@
     // border-radius: 25px;
     filter: drop-shadow(40px 40px 60px rgba(0, 0, 0, 0.5));
     height: auto;
-    margin-right: 5%;
     
     h4 {
         color:  #1f1f1f;
         margin: 0 0 0.3em 0;
-    }
-    .button { 
-        width:90%;
     }
   }
 
@@ -206,7 +208,7 @@
         font-size: 14px;
         font-weight: 400;
         text-align: left;
-        margin: 0;
+        margin: 0 0 0 1em;
         align-self: center; }
 
         a{

@@ -106,19 +106,30 @@ const App = {
 
         //Create Nav List
         let ul = document.createElement('ul');
-        ul.className='list';
+        ul.className='nav__list';
         navAnchor.appendChild(ul);
 
         ul.innerHTML = `
-        <a href="#">Home</a>
-        <a href="#rentals">Rentals</a>
-        <a href="#contact">Contact</a>`;
+        <li class="nav__item">
+            <a href="#">Home</a>
+        </li>
+        <li class="nav__item">
+            <a href="#rentals">Rentals</a>
+        </li>
+        <li class="nav__item">
+            <a href="#contact">Contact</a>
+        </li>`;
         if(Auth.authenticated){
             //Signed In - Show item Favourites, Profile & Sign Out
             ul.innerHTML +=`
-            <a href="#saved-rentals" id = "nav-item-saved" >Saved Rentals</a>
-            <a href="#user-profile" >My Profile</a>
-            <button class="logout-btn button login-style">Logout</button>`;
+            <li class="nav__item">
+                <a href="#saved-rentals" id = "nav-item-saved" >Saved Rentals</a>
+            </li>
+            <li class="nav__item">
+                <a href="#user-profile" >My Profile</a>
+            </li>
+
+            <button class="logout-btn button login-style">Sign Out</button>`;
 
         //Login------------------
             const logoutPageBtn = document.querySelector('.logout-btn');
@@ -130,8 +141,11 @@ const App = {
         }else{
             //Not Signed In - Show Sign Up & Sign In
             ul.innerHTML +=`
-            <a href="#create-account">Create Account</a>
-            <button class="authenticate-btn button login-style">Login</button>`;
+            <li class="nav__item">
+                <a href="#create-account">Sign Up</a>
+            </li>
+            
+            <button class="authenticate-btn button login-style">SIGN IN</button>`;
 
             //Login------------------
             const loginPageBtn = document.querySelector('.authenticate-btn');
@@ -157,64 +171,60 @@ const App = {
         let footer = document.querySelector('.main--footer');
 
         footer.innerHTML = `
+        <div class="margin-5">
+        <div class="container footer-content">
 
-            <div class="footer-row pr pl">
-                <h5>Website Disclaimer</h5>
-                <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
-                </h6>
-                <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
-                </h6>
+                <div class="footer-row">
+                    <h5>Website Disclaimer</h5>
+                    <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
+                    </h6>
+                    <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+                    </h6>
+                </div>
+
+                <div class="footer-row">
+                    <h5>Contact</h5>
+
+                        <h6 class="m-0">Phone: (08) 6247 6299</h6>
+                        <h6 class="m-2">Email: info@rental.finder.com.au</h6>
+
+                        <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
+
+                </div>
+
+                <div class="footer-row">
+                    <h5>Info</h5>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Monday:</h6>
+                        <h6 class="m-1 align-right">8am-5pm</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Tuesday:</h6>
+                        <h6 class="m-1 align-right">8am-5pm</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Wednesday:</h6>
+                        <h6 class="m-1 align-right">8am-5pm</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Thursday:</h6>
+                        <h6 class="m-1 align-right">8am-5pm</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Friday:</h6>
+                        <h6 class="m-1 align-right">8am-5pm</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Saturday:</h6>
+                        <h6 class="m-1 align-right">CLOSED</h6>
+                    </div>
+                    <div class="flex">
+                        <h6 class="m-1 align-left">Sunday:</h6>
+                        <h6 class="m-1 align-right">CLOSED</h6>
+                    </div>
+                </div>
             </div>
-
-            <div class="footer-row pl pr">
-                <h5>Contact</h5>
-
-                    <h6 class="m-0">Phone: (08) 6247 6299</h6>
-                    <h6 class="m-2">Email: info@rental.finder.com.au</h6>
-
-                    <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
-
-            </div>
-
-            <div class="footer-row pl pr">
-                <h5>Links</h5>
-                <a href="#rentals"><h6 class="m-1">Rental Properties</h6> </a>
-                <a href="#contact"><h6 class="m-1">Contact Us</h6> </a>
-                <a href="#create-account"><h6 class="m-1">Create Account</h6> </a>
-                <a href="#login"><h6 class="m-1">Login</h6> </a>
-            </div>
-
-            <div class="footer-row pl pr">
-                <h5>Info</h5>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Monday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Tuesday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Wednesday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Thursday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Friday:</h6>
-                    <h6 class="m-1 align-right">8am-5pm</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Saturday:</h6>
-                    <h6 class="m-1 align-right">CLOSED</h6>
-                </div>
-                <div class="flex">
-                    <h6 class="m-1 align-left">Sunday:</h6>
-                    <h6 class="m-1 align-right">CLOSED</h6>
-                </div>
-            </div>`;
+        </div>`;
 
 
     },
@@ -245,7 +255,7 @@ const App = {
     refreshNav: () => {
         //get the current path
         let currentPath = location.hash || '#';
-        let navItems = document.querySelectorAll('#main-nav > ul > a')
+        let navItems = document.querySelectorAll('#main-nav > ul > li > a')
         navItems.forEach((navLink) => {
             if(navLink.getAttribute('href') == currentPath){
                 navLink.classList.add('active');
