@@ -72,196 +72,196 @@ const App = {
 
     },
     
-    //Load Nav Bar
-    loadNav: () => {
-        //grab the template
-        let header = document.querySelector('.page-header');
+    // //Load Nav Bar
+    // loadNav: () => {
+    //     //grab the template
+    //     let header = document.querySelector('.page-header');
         
-        //Create Div Element (Logo)
-        let logoAnchor = document.createElement('a');
-        //Class Name
-        logoAnchor.className='logo';
-        //On Click redirect to Home
-        logoAnchor.href="#";
-        //Append to Header
-        header.appendChild(logoAnchor);
-        //Create Image Element
-        let logoImg = document.createElement('img');
-        //Image Class Name
-        logoImg.className = 'logo-img';
-        //Select Image
-        logoImg.setAttribute('src', '../images/logo.png')
-        //Appen to Div Class
-        logoAnchor.appendChild(logoImg);
+    //     //Create Div Element (Logo)
+    //     let logoAnchor = document.createElement('a');
+    //     //Class Name
+    //     logoAnchor.className='logo';
+    //     //On Click redirect to Home
+    //     logoAnchor.href="#";
+    //     //Append to Header
+    //     header.appendChild(logoAnchor);
+    //     //Create Image Element
+    //     let logoImg = document.createElement('img');
+    //     //Image Class Name
+    //     logoImg.className = 'logo-img';
+    //     //Select Image
+    //     logoImg.setAttribute('src', '../images/logo.png')
+    //     //Appen to Div Class
+    //     logoAnchor.appendChild(logoImg);
         
-        //Create Main Nav div
-        let navAnchor = document.createElement('nav');
-        navAnchor.id='main-nav';
-        header.appendChild(navAnchor);
+    //     //Create Main Nav div
+    //     let navAnchor = document.createElement('nav');
+    //     navAnchor.id='main-nav';
+    //     header.appendChild(navAnchor);
 
-        //Create Mobile Burger Menu
-        let burger = document.createElement('div');
-        burger.className='burger';
-        header.appendChild(burger);
+    //     //Create Mobile Burger Menu
+    //     let burger = document.createElement('div');
+    //     burger.className='burger';
+    //     header.appendChild(burger);
 
-        //Create Nav List
-        let ul = document.createElement('ul');
-        ul.className='nav__list';
-        navAnchor.appendChild(ul);
+    //     //Create Nav List
+    //     let ul = document.createElement('ul');
+    //     ul.className='nav__list';
+    //     navAnchor.appendChild(ul);
 
-        ul.innerHTML = `
-        <li class="nav__item">
-            <a href="#">Home</a>
-        </li>
-        <li class="nav__item">
-            <a href="#rentals">Rentals</a>
-        </li>
-        <li class="nav__item">
-            <a href="#contact">Contact</a>
-        </li>`;
-        if(Auth.authenticated){
-            //Signed In - Show item Favourites, Profile & Sign Out
-            ul.innerHTML +=`
-            <li class="nav__item">
-                <a href="#saved-rentals" id = "nav-item-saved" >Saved Rentals</a>
-            </li>
-            <li class="nav__item">
-                <a href="#user-profile" >My Profile</a>
-            </li>
+    //     ul.innerHTML = `
+    //     <li class="nav__item">
+    //         <a href="#">Home</a>
+    //     </li>
+    //     <li class="nav__item">
+    //         <a href="#rentals">Rentals</a>
+    //     </li>
+    //     <li class="nav__item">
+    //         <a href="#contact">Contact</a>
+    //     </li>`;
+    //     if(Auth.authenticated){
+    //         //Signed In - Show item Favourites, Profile & Sign Out
+    //         ul.innerHTML +=`
+    //         <li class="nav__item">
+    //             <a href="#saved-rentals" id = "nav-item-saved" >Saved Rentals</a>
+    //         </li>
+    //         <li class="nav__item">
+    //             <a href="#user-profile" >My Profile</a>
+    //         </li>
 
-            <button class="logout-btn button login-style">Sign Out</button>`;
+    //         <button class="logout-btn button login-style">Sign Out</button>`;
 
-        //Login------------------
-            const logoutPageBtn = document.querySelector('.logout-btn');
-        //On Click
-            logoutPageBtn.addEventListener('click', () => {
-            //Link to Login Page
-                location.href = "#logout";
-            })
-        }else{
-            //Not Signed In - Show Sign Up & Sign In
-            ul.innerHTML +=`
-            <li class="nav__item">
-                <a href="#create-account">Sign Up</a>
-            </li>
+    //     //Login------------------
+    //         const logoutPageBtn = document.querySelector('.logout-btn');
+    //     //On Click
+    //         logoutPageBtn.addEventListener('click', () => {
+    //         //Link to Login Page
+    //             location.href = "#logout";
+    //         })
+    //     }else{
+    //         //Not Signed In - Show Sign Up & Sign In
+    //         ul.innerHTML +=`
+    //         <li class="nav__item">
+    //             <a href="#create-account">Sign Up</a>
+    //         </li>
             
-            <button class="authenticate-btn button login-style">SIGN IN</button>`;
+    //         <button class="authenticate-btn button login-style">SIGN IN</button>`;
 
-            //Login------------------
-            const loginPageBtn = document.querySelector('.authenticate-btn');
-            //On Click
-            loginPageBtn.addEventListener('click', () => {
-                //Link to Login Page
-                location.href = "#login";
-            })
-        };
+    //         //Login------------------
+    //         const loginPageBtn = document.querySelector('.authenticate-btn');
+    //         //On Click
+    //         loginPageBtn.addEventListener('click', () => {
+    //             //Link to Login Page
+    //             location.href = "#login";
+    //         })
+    //     };
 
-        burger.innerHTML = `
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>`;
-
-
-        App.refreshNav();
-        App.navSlide();
-    },
-
-    loadFooter: () => {
-        //grab the template
-        let footer = document.querySelector('.main--footer');
-
-        footer.innerHTML = `
-        <div class="margin-5">
-        <div class="container footer-content">
-
-                <div class="footer-row">
-                    <h5>Website Disclaimer</h5>
-                    <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
-                    </h6>
-                    <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
-                    </h6>
-                </div>
-
-                <div class="footer-row">
-                    <h5>Contact</h5>
-
-                        <h6 class="m-0">Phone: (08) 6247 6299</h6>
-                        <h6 class="m-2">Email: info@rental.finder.com.au</h6>
-
-                        <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
-
-                </div>
-
-                <div class="footer-row">
-                    <h5>Info</h5>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Monday:</h6>
-                        <h6 class="m-1 align-right">8am-5pm</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Tuesday:</h6>
-                        <h6 class="m-1 align-right">8am-5pm</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Wednesday:</h6>
-                        <h6 class="m-1 align-right">8am-5pm</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Thursday:</h6>
-                        <h6 class="m-1 align-right">8am-5pm</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Friday:</h6>
-                        <h6 class="m-1 align-right">8am-5pm</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Saturday:</h6>
-                        <h6 class="m-1 align-right">CLOSED</h6>
-                    </div>
-                    <div class="flex">
-                        <h6 class="m-1 align-left">Sunday:</h6>
-                        <h6 class="m-1 align-right">CLOSED</h6>
-                    </div>
-                </div>
-            </div>
-        </div>`;
+    //     burger.innerHTML = `
+    //     <div class="line1"></div>
+    //     <div class="line2"></div>
+    //     <div class="line3"></div>`;
 
 
-    },
+    //     App.refreshNav();
+    //     App.navSlide();
+    // },
 
-    //Nav Menu Hamburger Setup
-    navSlide: () =>{
-        //Define Links
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('#main-nav');
-        const navLinks = document.querySelectorAll('#main-nav a');
+    // loadFooter: () => {
+    //     //grab the template
+    //     let footer = document.querySelector('.main--footer');
 
-        burger.addEventListener('click', () =>{
-            //Open Nav Menu
-            nav.classList.toggle('open');
+    //     footer.innerHTML = `
+    //     <div class="margin-5">
+    //     <div class="container footer-content">
+
+    //             <div class="footer-row">
+    //                 <h5>Website Disclaimer</h5>
+    //                 <h6>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright images not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia).
+    //                 </h6>
+    //                 <h6>No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.
+    //                 </h6>
+    //             </div>
+
+    //             <div class="footer-row">
+    //                 <h5>Contact</h5>
+
+    //                     <h6 class="m-0">Phone: (08) 6247 6299</h6>
+    //                     <h6 class="m-2">Email: info@rental.finder.com.au</h6>
+
+    //                     <h6 class="m-0">Address: 102 Avoca St. Sydney, NSW 2035</h6>
+
+    //             </div>
+
+    //             <div class="footer-row">
+    //                 <h5>Info</h5>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Monday:</h6>
+    //                     <h6 class="m-1 align-right">8am-5pm</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Tuesday:</h6>
+    //                     <h6 class="m-1 align-right">8am-5pm</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Wednesday:</h6>
+    //                     <h6 class="m-1 align-right">8am-5pm</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Thursday:</h6>
+    //                     <h6 class="m-1 align-right">8am-5pm</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Friday:</h6>
+    //                     <h6 class="m-1 align-right">8am-5pm</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Saturday:</h6>
+    //                     <h6 class="m-1 align-right">CLOSED</h6>
+    //                 </div>
+    //                 <div class="flex">
+    //                     <h6 class="m-1 align-left">Sunday:</h6>
+    //                     <h6 class="m-1 align-right">CLOSED</h6>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     </div>`;
+
+
+    // },
+
+    // //Nav Menu Hamburger Setup
+    // navSlide: () =>{
+    //     //Define Links
+    //     const burger = document.querySelector('.burger');
+    //     const nav = document.querySelector('#main-nav');
+    //     const navLinks = document.querySelectorAll('#main-nav a');
+
+    //     burger.addEventListener('click', () =>{
+    //         //Open Nav Menu
+    //         nav.classList.toggle('open');
             
-            //Menu Links Animation
-            navLinks.forEach(a => {
-                a.classList.toggle('fade')
-            });
+    //         //Menu Links Animation
+    //         navLinks.forEach(a => {
+    //             a.classList.toggle('fade')
+    //         });
 
-        //Burger Animation
-        burger.classList.toggle('toggle');
-    });
+    //     //Burger Animation
+    //     burger.classList.toggle('toggle');
+    // });
         
-    },
+    // },
     
 
-    refreshNav: () => {
-        //get the current path
-        let currentPath = location.hash || '#';
-        let navItems = document.querySelectorAll('#main-nav > ul > li > a')
-        navItems.forEach((navLink) => {
-            if(navLink.getAttribute('href') == currentPath){
-                navLink.classList.add('active');
-            }
-        });
-    },  
+    // refreshNav: () => {
+    //     //get the current path
+    //     let currentPath = location.hash || '#';
+    //     let navItems = document.querySelectorAll('#main-nav > ul > li > a')
+    //     navItems.forEach((navLink) => {
+    //         if(navLink.getAttribute('href') == currentPath){
+    //             navLink.classList.add('active');
+    //         }
+    //     });
+    // },  
 
 }
 

@@ -114,7 +114,383 @@
         </div> 
     </script> 
 
+    <!--Rentals Page Template-->
+    <script type="text/template" id="template-page-rentals">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header">
+            </header>
 
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+            
+            <!--Page Hero-->
+            <main class="page-content">
+                <div class= "cover rental-image">
+                    <div class="overlay">
+                        <div class= "hero-text">
+                            <h2>{{intro}}</h2>
+                            <!-- <p>{{subHeading}}</p> -->
+                        </div>
+                    </div>
+                </div>
+                <section class="container">
+                        <!--Filter Bar-->
+                        <div class= "filter-grid">
+                            <h4>Search Rentals</h4>
+                            <div id="rentals-list-filters"></div>
+                        </div>
+                        <!--Load Rentals-->
+                        <div id="rentals-list"></div>
+                </section>
+
+                <footer class="main--footer"></footer>
+            </main>
+        </div> 
+
+    </script>
+
+    <!--Saved Rentals Page Template-->
+    <script type="text/template" id="template-page-saved">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+
+            <main class="page-content">
+                <div class= "cover save-image">
+                    <div class="overlay">
+                        <div class= "hero-text">
+                            <h2>{{intro}}</h2>
+                            <!-- <p>{{subHeading}}</p> -->
+                        </div>
+                    </div>
+                </div>
+                <section class="container">
+                    <!--Load Saved Rentals-->
+                    <div id="rentals-list"></div>
+                </section>
+
+                <footer class="main--footer"></footer>
+            </main>
+        </div> 
+
+        <footer class="main--footer"></footer>
+
+    </script>
+
+    <!--Contact Page Template-->
+    <script type="text/template" id="template-page-contact">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+
+            <button class="fas fa-chevron-up back-to-top" id="btt"></button> 
+
+        <main class="page-content">
+            <!--Hero Image-->
+            <div class= "cover contact-image">
+                <div class="overlay">
+                        <div class= "hero-text">
+                            <h2>{{intro}}</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="container width-100">
+                <div class= "page-content-contact">
+                    <!--Column One-->
+                    <div class="clm-1">
+                        <!--The div element for the map -->
+                        <div class="details-contact">
+                            <h4>Get In Touch</h4>
+                        </div>
+                    </div>
+                    <!--Column Two-->
+                    <div class="clm-2">
+                        <!--Contact Form-->
+                        <div class="contact_form">
+                            <h4>Send Us a Message</h4>
+                            <form action="" method="post" id="form-send-message" class = "inline-form">
+                                <div class = "field">
+                                    <input type ="text" class="input" name="your_name" placeholder ="Your Name">
+                                </div>
+                                <div class = "field">
+                                    <input type ="email" class="input" name="email" placeholder ="Email">
+                                </div>
+                                <div class = "field">
+                                    <input type ="mobile" class="input" name="mobile" placeholder ="Mobile">
+                                </div>
+                                <div class = "field">
+                                    <input type ="text" class="input" name="message_subject" placeholder ="Message Subject">
+                                </div>
+                                <div class = "field">
+                                    <textarea type = "text" class="input_textbox" id="textbox" name="subject" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class = "field">
+                                    <input type ="submit" value ="Send" class="send-btn button">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="main--footer"></footer>
+
+        </main>
+        </div> 
+    </script>
+
+    <!--Login Page Template-->
+    <script type="text/template" id="template-page-login">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+            <main class="page-content">
+            <section class="fixed-content">
+                <div class="hero-image login-image">
+                    <div class="content-login">
+                        <div class="form-padding">
+                            <h4>Sign In</h4>
+                            <!--Login Form-->
+                            <form action="" method="post" id="form-login" class = "inline-form">
+                                <div class = "field">
+                                    <input type ="email" class="input" name="email" placeholder ="Email">
+                                </div>
+                                <div class = "field">
+                                    <input type ="password" class="input" name="password" placeholder ="Password">
+                                </div>
+                                <div class = "row-three">
+                                    <div class = "field m-0">
+                                        <input type ="submit" value ="Sign In" class="login-btn button">
+                                    </div>
+                                    <p>Click here to <a href="#create-account">Sign Up</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            </main>
+        </div> 
+    </script>
+
+    <!--User Profile Page Template-->
+    <script type="text/template" id="template-page-userProfile">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+            <main class="page-content">
+                <!--User Data-->
+                <div class="userProfile">
+                    <div class ="your-profile">
+                        <h2>Your Profile</h2>
+                    </div>
+                    <div class ="myProfile">
+                        <div class ="user">
+                            <img src="{{ myPic }}" alt="User Picture" class="myPic">
+                            <h3>{{firstName}}</h3>
+                            <h3>{{lastName}}</h3>
+                            <h5>GUEST USER</h5>
+                        </div>
+                        <div class ="userProfileContent">
+                            <div class ="user_row_one">
+                                <h2>Personal Information</h2>
+                            </div>
+                            <div class ="user_row_two">
+                                <p>Email: {{email}}</p>
+                                <p>Mobile: {{mobile}}</p>
+                            </div>
+                            <div class ="user_row_three">
+                                <p>Date of Birth: {{dob}}</p>
+                                
+                            </div>
+                            <div class ="user_row_four"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div> 
+    </script>
+
+    <!-- Rental entry template -->
+    <script type="text/template" id="template-rental-entry">
+        <a class="view-rental-btn">
+            <!--Rental Image-->
+            <div class="image_banner">
+                <img src="{{ cover_image }}" alt="Rental Cover" class="rental-cover">
+            </div>
+            <div class="content">
+                <div class="row_one">
+                <h5>{{ address }}</h5>
+                </div>
+                <div class="row_two">
+                    <div class="column">
+                        <img src="./Images/bed.png" alt="Create Account" class="rental-icon">
+                        <h5>{{ bedrooms }}</h5>
+                    </div>
+                    <div class="column">
+                        <img src="./Images/bath.png" alt="Create Account" class="rental-icon">
+                        <h5>{{ bathrooms }}</h5>
+                    </div>
+                    <div class="column">
+                        <img src="./Images/car.png" alt="Create Account" class="rental-icon">
+                        <h5>{{ car_spaces }}</h5>
+                    </div>
+                </div>
+                <div class="row_three">
+                    <h5>${{ price }} Per Week</h5>
+                </div>
+
+                <button class="view-rental-modal-btn button">View Rental <i class="fas fa-arrow-right float-right"></i></button>
+
+            </div>
+        </a>
+
+    </script>
+
+    <!-- Rental Modal template -->
+    <script type="text/template" id="template-rental-modal">
+        <div class="rental-modal">
+            <img src="{{ cover_image }}" alt="Rental Cover" class="rental-cover-modal">
+            <div class="content-modal">
+                <!--Row One-->
+                <div class="modal-row-1">
+                    <h3>{{ address }}</h3>
+                </div>
+                <!--Row Two-->
+                <div class="modal-row-2">
+                    <div class="modal-column-1">
+                        <img src="./Images/bed.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ bedrooms }}</h3>
+                    </div>
+                    <div class="modal-column-2">
+                        <img src="./Images/bath.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ bathrooms }}</h3>
+                    </div>
+                    <div class="modal-column-3">
+                        <img src="./Images/car.png" alt="Create Account" class="rental-icon-modal">
+                        <h3>{{ car_spaces }}</h3>
+                    </div>
+                    <div class="modal-column-4">
+                        <h3>${{ price }} Per Week</h3>
+                    </div>
+                </div>
+                <!--Row Three-->
+                <div class= "modal-row-3">
+                    <!--Column One-->
+                    <div class="column-one">
+                        <p>{{ bedrooms}} Bedrooms</p>
+                        <p>{{ bathrooms }} Bathrooms</p>
+                        <p>{{ car_spaces}} Car Spaces</p>
+                        <p>{{ pets_allowed}} Pets Allowed</p>
+                        <p>{{ security_system }} Securtity System</p>
+                        <p>{{ swimming_pool }} Swimming Pool</p>
+                        <p>${{ price }} Per Week</p>
+                    </div>
+                    <!--Column Two-->
+                    <div class="column-two">
+                        <p>{{ rental_info }}</p>
+                    </div>
+                </div>
+                <!--The div element for the map -->
+                <div class="map-modal">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+    </script>
+        
+    <!--404 Page Template-->
+    <script type="text/template" id="template-page-404">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+            <main class="page-content">
+                <div class = "Template_404">
+                    <div class="template--404">
+                        <h2>404 Error</h2>
+                        <h4>Page Not Found. Please us the navigtaion above to redirect back to our pages.</h4>
+                    </div>
+
+                    <footer class="main--footer"></footer>
+                </div>
+            </main>
+        </div> 
+    </script> 
+
+    <!--Create Account Template-->
+    <script type="text/template" id="template-createAccount">
+        <div class="page page-home">
+            <!--Page Header-->
+            <header class="page-header"></header>
+            <main class="page-content">
+                <section class="fixed-content">
+                    <div class="createAccount-Page">
+                        <div class="hero-image contact-image center-account">
+                            <div class="content-createAccount">
+                                <div class="form-padding">
+                                <h4>Sign Up</h4>
+                                <!--Create Account Form-->
+                                    <form action="" method="post" id="form-create-account" class = "inline-form">
+                                        <div class = "createAccount-Column">
+                                            <div class = "field firstName">
+                                                <input type ="text" class="input firstName" name="first_name" placeholder ="First Name">
+                                            </div>
+                                            <div class = "field lastName">
+                                                <input type ="text" class="input" name="last_name" placeholder ="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class = "createAccount-Column">
+                                            <div class = "field mobile">
+                                                <input type ="mobile" class="input" name="mobile" placeholder ="Mobile">
+                                            </div>
+                                            <div class = "field dob">
+                                                <input type ="text" class="input" name="date_of_birth" placeholder ="Date of Birth">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class = "field">
+                                            <input type ="email" class="input" name="email" placeholder ="Email">
+                                        </div>
+
+                                        <!--Dropdown Box-->
+                                        <!-- <fieldset name ="smoker">
+                                            <p>
+                                                <select id = "Dropdown" name = "smoker" form = "form-create-account">
+                                                    <option value = "" disabled selected hidden>Do You Smoke?</option>
+                                                    <option value = true>Yes</option>
+                                                    <option value = false>No</option>
+                                                </select>
+                                            </p>
+                                        </fieldset> -->
+
+                                        <div class = "field">
+                                            <input type ="password" class="input" name="password" placeholder ="Password">
+                                        </div>
+                                        
+                                        <div class = "row_six">
+                                            <div class="submit">
+                                                <input type="submit" value="Submit" class="button submit-btn">
+                                            </div>
+                                            <p>Already have an Account? <a href="#login">Sign In Here</a></p>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+    </script> 
 
         <!--MapBox External JS Links-->
         <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
