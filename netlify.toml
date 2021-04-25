@@ -1,7 +1,7 @@
 [[redirects]]
 
 from ="/*"
-to = "/"
+to = "/index.html"
 status = 200
 
 signed = "API_SIGNATURE_TOKEN"
