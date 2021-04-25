@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": ".",
   "scripts": {
     "scss": "node-sass -w master/master.scss dist/all.css",
     "test": "echo \"Error: no test specified\" && exit 1"
