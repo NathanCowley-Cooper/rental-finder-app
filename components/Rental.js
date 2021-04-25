@@ -25,7 +25,7 @@ const Rental = {
         //return a promise
         return new Promise ((resolve,reject) => {
             //fetch rentals.json
-            fetch('http://localhost:8081/api/rentals')
+            fetch('https://rental-finder-api.herokuapp.com/api/rentals')
             .then(res => res.json())
             .then(rentals => {
                 resolve(rentals);
@@ -41,7 +41,7 @@ const Rental = {
         //return a promise
         return new Promise ((resolve,reject) => {
             //fetch rental
-            let url = new URL('http://localhost:8081/api/rentals');
+            let url = new URL('https://rental-finder-api.herokuapp.com/api/rentals');
             let params ={ ids: ids};
             url.search = new URLSearchParams(params).toString();
             
@@ -56,30 +56,6 @@ const Rental = {
         });
     },
 
-    create: (rentalData) => {
-        //send userData to backend API using fetch - POST
-        console.log(rentalData);
-        //Grab Rentals from Backend
-        fetch('http://localhost:8081/api/rentals', {
-        method:'post',
-        headers:{"Content-Type": "application/json" },
-        body: JSON.stringify (rentalData)
-        })
-        .then(res =>{
-            if(res.status !==201){
-                Notify.show("An Error Occured Creating New Rental")
-            }else{
-                //User Created Succesfully
-                Notify.show("Your Rental has been Created");
-                location.reload();
-            }
-        })
-        //Console Log and Notify Error
-        .catch(err => {
-            console.log(err);
-            Notify.show("Problem creating New Rental")
-        })
-    },
 
 
     //Get Rental Filter Data
@@ -89,7 +65,7 @@ const Rental = {
         return new Promise((resolve, reject) => {
             
             //fetch filter data
-            let url = new URL('http://127.0.0.1:8081/api/rentals');            
+            let url = new URL('https://rental-finder-api.herokuapp.com/api/rentals');            
             let params = { suburb: suburbId};
             url.search = new URLSearchParams(params).toString();
             console.log(url.search)
@@ -114,7 +90,7 @@ const Rental = {
 
         return new Promise((resolve, reject) => {
             //fetch rentals.json
-            fetch ('http://localhost:8081/api/suburbs')
+            fetch ('https://rental-finder-api.herokuapp.com/api/suburbs')
             .then (res => res.json())
             .then (suburbs => {
                 resolve(suburbs);
@@ -186,19 +162,19 @@ const Rental = {
             rental_info: rentalObj.data.rental_info
         };
         if (rentalObj.data.pets_allowed == true){
-            rentalShow.pets_allowed = 'yes';
+            rentalShow.pets_allowed = '';
         } else {
-            rentalShow.pets_allowed = 'no';
+            rentalShow.pets_allowed = 'No';
         }
         if (rentalObj.data.security_system == true){
-            rentalShow.security_system = 'yes';
+            rentalShow.security_system = '';
         } else {
-            rentalShow.security_system = 'no';
+            rentalShow.security_system = 'No';
         }
         if (rentalObj.data.swimming_pool == true){
-            rentalShow.swimming_pool = 'yes';
+            rentalShow.swimming_pool = '';
         } else {
-            rentalShow.swimming_pool = 'no';
+            rentalShow.swimming_pool = 'No';
         }
         //Get Modal Template
         const modalTemplate = document.querySelector('#template-rental-modal').innerHTML;
@@ -214,7 +190,7 @@ const Rental = {
             saveBtn.classList.add('button');
             saveBtn.innerText = "Save Rental";
             //Render to modal_row 1 div
-            let contentDiv = document.querySelector('.rental-modal > .content > .modal_row-1');
+            let contentDiv = document.querySelector('.container > .rental-modal > .landing-modal > .modal-row-1');
             contentDiv.appendChild(saveBtn);
             if(User.savRentals.includes(rentalObj.data._id) ){
                 //Get the Sav Button

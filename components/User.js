@@ -14,11 +14,12 @@ const User = {
     lastLogin: null,
     savRentals: [],
 
+    
     //Create User
     create: (userData) => {
         //send userData to backend API using fetch - POST
         //console.log(userData);
-        fetch('http://localhost:8081/api/users', {
+        fetch('https://rental-finder-api.herokuapp.com/api/users', {
         method:'post',
         headers:{"Content-Type": "application/json" },
         body: JSON.stringify (userData)
@@ -40,6 +41,7 @@ const User = {
             console.log(err);
             Notify.show("Problem creating New User")
         })
+
     },
     //Add Rental to Save 
     addRentalsToSav: (id) => {
@@ -58,6 +60,8 @@ const User = {
         }
         console.log(User.savRentals);
     },
+
+
     
 }
 
