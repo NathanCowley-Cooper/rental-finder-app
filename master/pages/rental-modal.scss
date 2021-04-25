@@ -1,11 +1,23 @@
 /* ==========RENTAL MODAL STYLING ============= */
-  .rental-modal::-webkit-scrollbar {
+  .modal{
+    position: relative;
+    z-index: 200;
+    &::-webkit-scrollbar {
       display: none;
+    }
   }
-  
+
   .content-modal{
-    overflow: hidden;
-    margin: 2% 5%;
+    padding: 0 4em;
+  }
+
+  .landing-modal{
+    display:grid;
+    grid-template-rows: 70vh auto auto;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 5%;
   }
   
   .rental-icon {
@@ -18,11 +30,11 @@
   
   .rental-cover-modal {
     width: 100%;
-    height:100vh;
-    object-fit: cover; }
+    height:100%;
+    object-fit: cover;
+    border-radius: 15px; }
   
   .modal-content {
-    display: grid;
     margin: 0;
     padding: 0; }
   
@@ -49,12 +61,19 @@
   
 .modal-row-3 {
     display: grid;
-    grid-template-columns: 20% 80%; 
+    grid-template-columns: 60% 40%;
+    column-gap: 50px; 
+
+    .column-one{
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto 1fr;
+    }
 
   .column-two{
       p{
           line-height: 2;
-          margin-top:0;
+          padding: 0 0 0.4em 0;
       }
     }
 }

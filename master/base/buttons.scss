@@ -9,11 +9,12 @@
     text-decoration: none;
     // border-radius:$button-border-radius;
     font-family: $base-font-family;
-    font-size: 15px;
+    font-size: 18px;
     border: none;
     border-radius: 2px;
     transition: transform .5s ease;
     width:fit-content;
+    min-width: 150px;
 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -79,6 +80,7 @@ button:focus {
 .send-btn{
     background: $rental-red;
     color: #fff;
+    width: 100%;
     &:hover{
         background: $rental-black;
         color: #fff;
@@ -112,10 +114,10 @@ button:focus {
 .edit-btn{
     background: white;
     color:  $rental-black;
-    border: 1px solid $rental-black;
+    border: 2px solid $rental-black;
     &:hover{
       background: $rental-red;
-      border: 1px solid$rental-red;
+      border: 2px solid$rental-red;
       color: white;
     }
   }
@@ -169,25 +171,24 @@ button:focus {
 
   .modal-close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    z-index: 500;
+    top: 25px;
+    right: 25px;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    padding: 0.8em 2em;
     text-align: center;
-    background: #eee;
-    border-radius: 50%;
-    border: none;
+    background: #fff;
+    border-radius: 2px;
+    border: 2px solid #b82026;;
+    color: #b82026;
     transition: all 0.2s ease;
     cursor: pointer;
     outline: none;
-    font-size: 2.5vh;
+    font-size: 2;
   
     &:hover{
     background: #b82026;
     color: #fff;
-    transform: scale(1.05);
     transition: transform .5s ease;
   }
 }
@@ -196,10 +197,10 @@ button:focus {
 
 //Desktop
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1600px) {
 
     .button{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
   
@@ -208,5 +209,6 @@ button:focus {
 @media only screen and (max-width: 768px) {
     .button{
         font-size: 22px;
+        width: 100%;
     }
 }

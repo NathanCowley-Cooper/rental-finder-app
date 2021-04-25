@@ -43,7 +43,7 @@
                     <section class= "home">
 
                         <div class= "home-text">
-                            <h2>Helping you find the perfect Property</h2>
+                            <h2>Helping you find the perfect property</h2>
                             <p>Click the button below to find a property</p>
                             <button class="view-rental-page button">View Rentals<i class="fas fa-arrow-right float-right"></i></button>
                         </div>
@@ -109,8 +109,13 @@
                     </section>
 
                     <footer class="main--footer"></footer>
-
             </main>
+            <section class="mobile-template">
+                <img src="./Images/icon.png" alt="Rentals" class="mobile-icon">
+                <h2>Coming Soon</h2>
+                <p>The mobile view for Rental Finder is currently undergoing some updates.</p>
+                <p>To view the new Rental Finder design, change to desktop view. Please check back soon!</p>
+            </section>
         </div> 
     </script> 
 
@@ -134,13 +139,15 @@
                     </div>
                 </div>
                 <section class="container">
-                        <!--Filter Bar-->
-                        <div class= "filter-grid">
-                            <h4>Search Rentals</h4>
-                            <div id="rentals-list-filters"></div>
-                        </div>
-                        <!--Load Rentals-->
-                        <div id="rentals-list"></div>
+                    <div class="page-content-main">
+                            <!--Filter Bar-->
+                            <div class= "filter-grid">
+                                <h4>Search Rentals</h4>
+                                <div id="rentals-list-filters"></div>
+                            </div>
+                            <!--Load Rentals-->
+                            <div id="rentals-list"></div>
+                    </div>
                 </section>
 
                 <footer class="main--footer"></footer>
@@ -167,8 +174,10 @@
                     </div>
                 </div>
                 <section class="container">
+                    <div class="page-content-main">
                     <!--Load Saved Rentals-->
-                    <div id="rentals-list"></div>
+                        <div id="rentals-list"></div>
+                    </div>
                 </section>
 
                 <footer class="main--footer"></footer>
@@ -203,6 +212,23 @@
                         <!--The div element for the map -->
                         <div class="details-contact">
                             <h4>Get In Touch</h4>
+                            <p>Get in touch and let us know how we can help you find your next property.</p>
+
+                            <div class="contact-row">
+                                <img src="./Images/Phone Icon - Black.png" alt="Contact Us" class="contact-icon">
+                                <p>(08) 6247 6299</p>
+                            </div>
+                            <div class="contact-row">
+                                <img src="./Images/Email Icon - Black.png" alt="Contact Us" class="contact-icon">
+                                <p>info@rental.finder.com.au</p>
+                            </div>
+                            <div class="contact-row">
+                                <img src="./Images/Map Icon - Black.png" alt="Contact Us" class="contact-icon">
+                                <div>
+                                    <p>102 Avoca St.</p>
+                                    <p>Sydney, NSW 2035</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--Column Two-->
@@ -210,6 +236,7 @@
                         <!--Contact Form-->
                         <div class="contact_form">
                             <h4>Send Us a Message</h4>
+                            <p>Fill in your details below and we’ll get back to you as quickly as possible.</p>
                             <form action="" method="post" id="form-send-message" class = "inline-form">
                                 <div class = "field">
                                     <input type ="text" class="input" name="your_name" placeholder ="Your Name">
@@ -285,33 +312,39 @@
             <header class="page-header"></header>
             <main class="page-content">
                 <!--User Data-->
-                <div class="userProfile">
-                    <div class ="your-profile">
-                        <h2>Your Profile</h2>
-                    </div>
-                    <div class ="myProfile">
-                        <div class ="user">
-                            <img src="{{ myPic }}" alt="User Picture" class="myPic">
-                            <h3>{{firstName}}</h3>
-                            <h3>{{lastName}}</h3>
-                            <h5>GUEST USER</h5>
-                        </div>
-                        <div class ="userProfileContent">
-                            <div class ="user_row_one">
-                                <h2>Personal Information</h2>
-                            </div>
-                            <div class ="user_row_two">
-                                <p>Email: {{email}}</p>
-                                <p>Mobile: {{mobile}}</p>
-                            </div>
-                            <div class ="user_row_three">
-                                <p>Date of Birth: {{dob}}</p>
-                                
-                            </div>
-                            <div class ="user_row_four"></div>
+                    <div class= "cover contact-image">
+                        <div class="overlay">
+                                <div class= "hero-text">
+                                    <h2>Your Profile</h2>
+                                </div>
                         </div>
                     </div>
-                </div>
+                    <div class ="container">
+                        <div class ="myProfile">
+                            <div class ="user">
+                                <img src="{{ myPic }}" alt="User Picture" class="myPic">
+                                <h3>{{firstName}}</h3>
+                                <h3>{{lastName}}</h3>
+                                <h5>GUEST USER</h5>
+                            </div>
+                            <div class ="userProfileContent">
+                                <div class ="user_row_one">
+                                    <h4>Personal Information</h4>
+                                </div>
+                                <div class ="user_row_two">
+                                    <p>Email: {{email}}</p>
+                                    <p>Mobile: {{mobile}}</p>
+                                </div>
+                                <div class ="user_row_three">
+                                    <p>Date of Birth: {{dob}}</p>
+                                    
+                                </div>
+                                <div class ="user_row_four"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="main--footer"></footer>
 
             </main>
         </div> 
@@ -355,55 +388,60 @@
 
     <!-- Rental Modal template -->
     <script type="text/template" id="template-rental-modal">
-        <div class="rental-modal">
-            <img src="{{ cover_image }}" alt="Rental Cover" class="rental-cover-modal">
-            <div class="content-modal">
-                <!--Row One-->
-                <div class="modal-row-1">
-                    <h3>{{ address }}</h3>
+        <div class="container">  
+            <div class="rental-modal">
+                <div class="landing-modal">
+                
+                <img src="{{ cover_image }}" alt="Rental Cover" class="rental-cover-modal">
+                        <!--Row One-->
+                        <div class="modal-row-1 content-modal">
+                            <h3>{{ address }}</h3>
+                        </div>
+
+                        <!--Row Two-->
+                        <div class="modal-row-2 content-modal">
+                            <div class="modal-column-1">
+                                <img src="./Images/bed.png" alt="Create Account" class="rental-icon-modal">
+                                <h3>{{ bedrooms }}</h3>
+                            </div>
+                            <div class="modal-column-2">
+                                <img src="./Images/bath.png" alt="Create Account" class="rental-icon-modal">
+                                <h3>{{ bathrooms }}</h3>
+                            </div>
+                            <div class="modal-column-3">
+                                <img src="./Images/car.png" alt="Create Account" class="rental-icon-modal">
+                                <h3>{{ car_spaces }}</h3>
+                            </div>
+                            <div class="modal-column-4">
+                                <h3>${{ price }} Per Week</h3>
+                            </div>
+                        </div>
                 </div>
-                <!--Row Two-->
-                <div class="modal-row-2">
-                    <div class="modal-column-1">
-                        <img src="./Images/bed.png" alt="Create Account" class="rental-icon-modal">
-                        <h3>{{ bedrooms }}</h3>
-                    </div>
-                    <div class="modal-column-2">
-                        <img src="./Images/bath.png" alt="Create Account" class="rental-icon-modal">
-                        <h3>{{ bathrooms }}</h3>
-                    </div>
-                    <div class="modal-column-3">
-                        <img src="./Images/car.png" alt="Create Account" class="rental-icon-modal">
-                        <h3>{{ car_spaces }}</h3>
-                    </div>
-                    <div class="modal-column-4">
-                        <h3>${{ price }} Per Week</h3>
-                    </div>
-                </div>
-                <!--Row Three-->
-                <div class= "modal-row-3">
-                    <!--Column One-->
-                    <div class="column-one">
-                        <p>{{ bedrooms}} Bedrooms</p>
-                        <p>{{ bathrooms }} Bathrooms</p>
-                        <p>{{ car_spaces}} Car Spaces</p>
-                        <p>{{ pets_allowed}} Pets Allowed</p>
-                        <p>{{ security_system }} Securtity System</p>
-                        <p>{{ swimming_pool }} Swimming Pool</p>
-                        <p>${{ price }} Per Week</p>
-                    </div>
-                    <!--Column Two-->
-                    <div class="column-two">
-                        <p>{{ rental_info }}</p>
-                    </div>
-                </div>
-                <!--The div element for the map -->
-                <div class="map-modal">
-                    <div id="map"></div>
+                    <!--Row Three-->
+                    <div class= "modal-row-3 content-modal">
+
+                        <!--Column One-->
+                        <div class="column-two">
+                            <p>{{ rental_info }}</p>
+                        </div>
+
+                        <!--Column Two-->
+                        <div class="column-one">
+                            <p>{{ bedrooms}} Bedrooms</p>
+                            <p>{{ bathrooms }} Bathrooms</p>
+                            <p>{{ car_spaces}} Car Spaces</p>
+                            <p>{{ pets_allowed}} Pets Allowed</p>
+                            <p>{{ security_system }} Securtity System</p>
+                            <p>{{ swimming_pool }} Swimming Pool</p>
+                            <p>${{ price }} Per Week</p>
+                        </div>
+                    <!-- The div element for the map
+                    <div class="map-modal">
+                        <div id="map"></div>
+                    </div> -->
                 </div>
             </div>
         </div>
-
     </script>
         
     <!--404 Page Template-->
@@ -496,7 +534,7 @@
     </script> 
 
         <!--MapBox External JS Links-->
-        <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+        <!-- <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script> -->
         <!--Font Awesome External JS Links-->
         <script src='./node_modules/mustache/mustache.min.js'></script>
         <!--Connect to JS (Page Controller)-->

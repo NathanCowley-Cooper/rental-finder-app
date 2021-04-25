@@ -37,7 +37,7 @@ header{
 
       .nav__list{
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto;
         gap: 30px;
         justify-items: center;
         align-items: center;
@@ -86,7 +86,7 @@ header{
               content: "";
               position: absolute;
               width: 100%;
-              border-bottom: 3px solid $rental-red;
+              border-bottom: 2px solid $rental-red;
               bottom: 0;
               left: 0;
               transform: scaleX(0);

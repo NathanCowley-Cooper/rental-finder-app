@@ -2,14 +2,17 @@
 @import '../vars';
 
 .filter-grid{
-    padding-top: 5%;
+    padding: 4em 4em 0 4em;
     // background-color: #fff;
     // margin: -10% 10% 0 10%;
     // box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.05);
+    h4{
+        color:$rental-red;
+    }
 }
 
 #rentals-list{
-    margin:5% 0;
+    padding: 4em;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
@@ -19,6 +22,13 @@
 
 .background-grey{
     background-color: #f8f8f8;
+}
+
+.page-content-main{
+    margin:-10% 0 10% 0;
+    background-color: #fff;
+    
+    position: relative;
 }
 
 .rental-entry {

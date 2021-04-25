@@ -20,6 +20,42 @@
     position: relative; 
 }
 
+.mobile-template{
+  display: none;
+}
+
+//Hide on Mobile
+@media only screen and (max-width: 1024px) {
+
+  .page-content{
+    display: none;
+  }
+
+  .mobile-template{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    padding: 6em;
+    .mobile-icon{
+      height: 20vh;
+      width: 20vh;
+    }
+    h2{
+      text-align: center;
+      margin: 0 0 0.2em 0;
+    }
+    p{
+      text-align: center;
+      margin: 0 0 1em 0;
+    }
+  }
+
+}
+
 .width-100{
   width:100%;
 }
@@ -150,29 +186,45 @@
 .page-content-contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
     width: 100%;
-    margin:10% 0; }
+    margin:-10% 0 10% 0;
+    background-color: #fff;
+    
+    position: relative;
+    h4{
+      color:$rental-red;
+    }
   
-.clm-1{
-    grid-column: 1;
+  .clm-1{
+    padding: 4em;
+  }
+
+  .clm-2{
+    padding: 4em;
+  }
 }
 
-.clm-2{
-     grid-column: 2;
-}
+.contact-row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:2em;
+    margin-top: 2.5em;
 
-.map-contact{
-    height:100%;
-    width: 100%;
-    margin: 0;
+    .contact-icon{
+      width: 35px;
+      height: 35px;
+
+    }
+    p{
+      margin: 0;
+    }
 }
 
 /////////////Create Account Page/////////////
 .createAccount-Page {
     h4 {
         text-align: center;
-        font-weight: 400;
     }
 }
   
@@ -242,7 +294,6 @@
 /////////////Login Page/////////////
 .content-login{
   background-color: #fff;
-  width: 25vw;
   height:auto;
   box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.15);
 
@@ -259,7 +310,6 @@
 
   .content-createAccount{
     background-color: #fff;
-    width: 30vw;
     height:auto;
     box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.15);
   
@@ -273,7 +323,6 @@
 .login-image{
   h4{
     text-align: center;
-    font-weight: 400;
   }
 }
 .row-three{
@@ -306,26 +355,29 @@
 }
 
 .myPic{
-  width: 25vh;
-  height:25vh;
-  margin-bottom: 1em;
+  width: 15vh;
+  height:15vh;
 }
 
 .myProfile {
   display: grid;
   grid-template-columns: 25% 1fr;
+  column-gap:40px;
   background: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(0.9);
+  // box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.05);
+  transform: scale(1);
   transition: all 0.3s ease; 
+  margin-top:-10%;
+  margin-bottom:20%;
+  padding: 3em;
 }
 
 .user{
   display: grid;
   grid-template-rows: auto auto auto;
+  row-gap: 10px;
   justify-items: center;
   align-items: center;
-  padding: 2em;
 
   h3{
     color:$rental-red;
@@ -346,7 +398,7 @@
   grid-template-rows: auto auto auto auto;
   align-items: center;
 
-  h2{
+  h4{
     margin:0;
   }
 
@@ -357,7 +409,8 @@
 
 .user_row_two{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
 }
 
 .user_row_three{

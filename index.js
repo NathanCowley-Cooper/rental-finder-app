@@ -17,31 +17,31 @@ import { addRentalPageController } from './page-controllers/addRental.js';
 //# (Home)
 App.addRoute('#', homePageController);
 
-// //#rentals
-// App.addRoute('#rentals', rentalsPageController);
+//#rentals
+App.addRoute('#rentals', rentalsPageController);
 
-// //#saved-rentals
-// App.addRoute('#saved-rentals', savedPageController);
+//#saved-rentals
+App.addRoute('#saved-rentals', savedPageController);
 
-// //#contact
-// App.addRoute('#contact', contactPageController);
+//#contact
+App.addRoute('#contact', contactPageController);
 
-// //#login
-// App.addRoute('#login', userLoginPageController);
+//#login
+App.addRoute('#login', userLoginPageController);
 
-// //#Create Account
-// App.addRoute('#create-account', createAccountPageController);
+//#Create Account
+App.addRoute('#create-account', createAccountPageController);
 
-// //#user Profile
-// App.addRoute('#user-profile', userProfilePageController);
+//#user Profile
+App.addRoute('#user-profile', userProfilePageController);
 
-// //#add rental
-// App.addRoute('#add-rental', addRentalPageController);
+//#add rental
+App.addRoute('#add-rental', addRentalPageController);
 
-// //#Logout
-// App.addRoute('#logout', () => {
-//     Auth.logout();
-// });
+//#Logout
+App.addRoute('#logout', () => {
+    Auth.logout();
+});
 
 //Load App------------------------------
 document.addEventListener("DOMContentLoaded", App.init ); 

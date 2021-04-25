@@ -32,7 +32,7 @@ function userProfilePageController(){
         editButton.classList.add('button');
         editButton.innerText = "EDIT";
         //Render to user_row_four
-        let editDiv = document.querySelector('.userProfile > .myProfile > .userProfileContent > .user_row_four');
+        let editDiv = document.querySelector('.container >  .myProfile > .userProfileContent > .user_row_four');
         editDiv.appendChild(editButton);
 
         //Create Delete Button
@@ -41,7 +41,7 @@ function userProfilePageController(){
         deleteButton.classList.add('button');
         deleteButton.innerText = "DELETE";
         //Render to user_row_four
-        let deleteDiv = document.querySelector('.userProfile > .myProfile > .userProfileContent > .user_row_four');
+        let deleteDiv = document.querySelector('.container >  .myProfile > .userProfileContent > .user_row_four');
         deleteDiv.appendChild(deleteButton);
 
     });

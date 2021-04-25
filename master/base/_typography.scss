@@ -37,22 +37,24 @@ h3{
   font-family: $heading-font-family;
   line-height: $base-line-height;
   font-weight: 300;
-  font-size: 5.5vh;
+  font-size: 3vh;
   margin: 0;
+
   @media only screen and (max-width: 1024px) {
-    font-size: 4.5vh;
+    font-size: 2.5vh;
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 4vh;
+    font-size: 2vh;
   }
 }
 
 h4{
   font-family: $heading-font-family;
   line-height: $base-line-height;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 4vh;
+
   @media only screen and (max-width: 1024px) {
     font-size: 3.5vh;
   }
@@ -67,8 +69,9 @@ h5{
   line-height: $base-line-height;
   font-weight: 300;
   font-size: 2.6vh;
-  @media only screen and (max-width: 1024px) {
-    font-size: 2.4vh;
+
+  @media only screen and (max-width: 1600px) {
+    font-size: 3vh;
   }
 
   @media only screen and (max-width: 768px) {
@@ -81,8 +84,9 @@ h6{
   line-height: 2;
   font-weight: 100;
   font-size: 1.8vh;
-  @media only screen and (max-width: 1024px) {
-    font-size: 1.5vh;
+
+  @media only screen and (max-width: 1600px) {
+    font-size: 2.2vh;
   }
 
   @media only screen and (max-width: 768px) {
@@ -129,7 +133,7 @@ p {
   font-size: 2.5vh;
 
   @media only screen and (max-width: 1600px) {
-    font-size: 1.8vh;
+    font-size: 2.8vh;
   }
 
   @media only screen and (max-width: 1024px) {

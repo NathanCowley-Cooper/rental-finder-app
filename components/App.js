@@ -129,7 +129,7 @@ const App = {
                 <a href="#user-profile" >My Profile</a>
             </li>
 
-            <button class="logout-btn button login-style">Sign Out</button>`;
+            <button class="logout-btn button login-style">SIGN OUT</button>`;
 
         //Login------------------
             const logoutPageBtn = document.querySelector('.logout-btn');
