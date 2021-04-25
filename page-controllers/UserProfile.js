@@ -3,7 +3,7 @@ import { App } from '../components/App.js';
 import { User } from '../components/User.js';
 
 //Create Page Controller
-function userProfilePageController(){
+function UserProfilePageController(){
     
     //Insert Data Using Moustache
     let data = {
@@ -47,4 +47,4 @@ function userProfilePageController(){
     });
 }
 
-export { userProfilePageController } //Export Page Controller
+export { UserProfilePageController } //Export Page Controller

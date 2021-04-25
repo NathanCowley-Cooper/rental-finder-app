@@ -2,7 +2,7 @@
 import { App } from '../components/App.js';
 import { Auth } from '../components/Auth.js';
 
-function homePageController(){
+function HomePageController(){
     //Insert Data Using Moustache
     let data = {
         intro: "Welcome to Rental Finder!",
@@ -142,4 +142,4 @@ function homePageController(){
 
 }
 
-export { homePageController } //Export Home Page Controller
+export { HomePageController } //Export Home Page Controller

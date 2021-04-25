@@ -3,7 +3,7 @@ import { App } from '../components/App.js';
 import { Message } from '../components/contactMessage.js';
 
 //Create Page Controller
-function contactPageController(){
+function ContactPageController(){
     //Craete Data Using Moustache
     let data = {
         intro: "Contact Us",  
@@ -53,4 +53,4 @@ function contactPageController(){
     });
 }
 
-export { contactPageController } //Export Page Componenet
+export { ContactPageController } //Export Page Componenet

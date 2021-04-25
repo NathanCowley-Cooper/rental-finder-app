@@ -3,40 +3,40 @@ import { App } from './components/App.js';
 import { Auth } from './components/Auth.js';
 
 //Import Page Controllers----------------------
-import { rentalsPageController } from './page-controllers/rentals.js';
-import { homePageController } from './page-controllers/home.js';
-import { userLoginPageController } from './page-controllers/login.js';
-import { savedPageController } from './page-controllers/saved.js';
-import { contactPageController } from './page-controllers/contact.js';
-import { createAccountPageController } from './page-controllers/createAccount.js';
-import { userProfilePageController } from './page-controllers/UserProfile.js';
-import { addRentalPageController } from './page-controllers/addRental.js';
+import { RentalsPageController } from './page-controllers/rentals.js';
+import { HomePageController } from './page-controllers/home.js';
+import { UserLoginPageController } from './page-controllers/login.js';
+import { SavedPageController } from './page-controllers/saved.js';
+import { ContactPageController } from './page-controllers/contact.js';
+import { CreateAccountPageController } from './page-controllers/createAccount.js';
+import { UserProfilePageController } from './page-controllers/UserProfile.js';
+import { AddRentalPageController } from './page-controllers/addRental.js';
 
 
 //Routes--------------------------------
 //# (Home)
-App.addRoute('#', homePageController);
+App.addRoute('#', HomePageController);
 
 //#rentals
-App.addRoute('#rentals', rentalsPageController);
+App.addRoute('#rentals', RentalsPageController);
 
 //#saved-rentals
-App.addRoute('#saved-rentals', savedPageController);
+App.addRoute('#saved-rentals', SavedPageController);
 
 //#contact
-App.addRoute('#contact', contactPageController);
+App.addRoute('#contact', ContactPageController);
 
 //#login
-App.addRoute('#login', userLoginPageController);
+App.addRoute('#login', UserLoginPageController);
 
 //#Create Account
-App.addRoute('#create-account', createAccountPageController);
+App.addRoute('#create-account', CreateAccountPageController);
 
 //#user Profile
-App.addRoute('#user-profile', userProfilePageController);
+App.addRoute('#user-profile', UserProfilePageController);
 
 //#add rental
-App.addRoute('#add-rental', addRentalPageController);
+App.addRoute('#add-rental', AddRentalPageController);
 
 //#Logout
 App.addRoute('#logout', () => {

@@ -5,7 +5,7 @@ import { Rental } from '../components/Rental.js';
 import { User } from '../components/User.js';
 
 //Create Page Controller
-function savedPageController(){
+function SavedPageController(){
     //Insert Data Using Moustache
     let data = {
         intro: "Saved Rental Houses",
@@ -65,4 +65,4 @@ function savedPageController(){
 
 }
 
-export { savedPageController } //Export Page Controller
+export { SavedPageController } //Export Page Controller

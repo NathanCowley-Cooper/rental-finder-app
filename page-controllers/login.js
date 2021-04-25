@@ -4,7 +4,7 @@ import { Notify } from '../components/notify.js';
 import { Auth } from '../components/Auth.js';
 
 //Create Page Controller
-function userLoginPageController(){
+function UserLoginPageController(){
     
     //Load Page Data
     App.loadPage ('Sign In | Rental Finder', 'template-page-login', {}, () =>{
@@ -45,5 +45,5 @@ function userLoginPageController(){
 
 }
 
-export { userLoginPageController }//Export Page Controller
+export { UserLoginPageController }//Export Page Controller
 

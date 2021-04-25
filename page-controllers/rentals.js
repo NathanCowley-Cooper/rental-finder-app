@@ -4,7 +4,7 @@ import { Notify } from '../components/notify.js';
 import { Rental } from '../components/Rental.js';
 
 //Create Page Controller
-function rentalsPageController(){
+function RentalsPageController(){
     //Insert Data Using Moustache
     let data = {
         intro: "Rental Houses",
@@ -128,4 +128,4 @@ function rentalsPageController(){
 
 }
 
-export { rentalsPageController } //Export page Controller
+export { RentalsPageController } //Export page Controller

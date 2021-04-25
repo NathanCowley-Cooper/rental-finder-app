@@ -4,7 +4,7 @@ import { User } from '../components/User.js';
 import { Notify } from "../components/notify.js";
 
 //Create Page Controller
-function createAccountPageController(){
+function CreateAccountPageController(){
     
     //Insert Data Using Moustache
     let data = {
@@ -34,4 +34,4 @@ function signUpEvent() {
 }
 
 
-export { createAccountPageController } //Export Page Component
+export { CreateAccountPageController } //Export Page Component

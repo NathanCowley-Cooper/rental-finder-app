@@ -3,7 +3,7 @@ import { App } from '../components/App.js';
 import { Rental } from '../components/Rental.js';
 
 //Create Page Controller
-function addRentalPageController(){
+function AddRentalPageController(){
     
     
     //Load Page Data
@@ -32,4 +32,4 @@ function addRentalPageController(){
     });
 }
 
-export { addRentalPageController } //Export Page Controller
+export { AddRentalPageController } //Export Page Controller
