@@ -1,5 +1,6 @@
 //Import Componenets
 import { Notify } from "./notify.js";
+import { User } from "./User.js";
 import { Auth } from "./Auth.js";
 
 //Create Appp Compnenet
@@ -39,6 +40,7 @@ const App = {
         else{
             //load 404 Page
             App.loadPage('404 Page/File Not Found', 'template-page-404', {});
+            console.log(err);
         }
     },
 
