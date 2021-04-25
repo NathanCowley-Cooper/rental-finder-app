@@ -7,7 +7,7 @@ import { Rental } from '../components/Rental.js';
 function rentalsPageController(){
     //Insert Data Using Moustache
     let data = {
-        intro: "Rentals",
+        intro: "Rental Houses",
         subHeading: "View Available Rentals Below!"      
         //firstName: User.firstName,
         //lastName: User.lastName,
@@ -16,7 +16,7 @@ function rentalsPageController(){
     }
 
     //Load Page Data
-    App.loadPage('Rentals', 'template-page-rentals', data, () => {
+    App.loadPage('Rental Properties | Rental Finder', 'template-page-rentals', data, () => {
         //get #divs rentals list
         const rentalsListDiv = document.querySelector('#rentals-list');
 
@@ -68,6 +68,27 @@ function rentalsPageController(){
             console.log(err);
         })
 
+        //Back To Top Button
+        function returnTop(){
+            const btt = document.getElementById('btt');
+            if ( window.pageYOffset > 800 ) {
+                btt.classList.add("active-btn");
+            } else {
+                btt.classList.remove("active-btn");
+            }
+        }
+        window.onscroll = function() {
+            returnTop();
+        }
+
+        //Get Back to Top Button Button
+        const goTopPageBtn = document.querySelector('#btt');
+        //On Click
+        goTopPageBtn.addEventListener('click', () => {
+            //Link to Top
+            window.scrollTo(0, 0);
+        })
+
         //Create a Clear Filters Button
         let clearFiltersBtn = document.createElement('button');
         clearFiltersBtn.className = 'button filter-btn';
@@ -83,7 +104,7 @@ function rentalsPageController(){
             rentalsListDiv.innerHTML = '';
             getAllRentals();
         });
-
+        
 
         // get all rentals
         function getAllRentals(){
@@ -103,8 +124,8 @@ function rentalsPageController(){
         }
         //Run Function
         getAllRentals()
-
         });  
+
 }
 
 export { rentalsPageController } //Export page Controller

@@ -6,15 +6,10 @@ import { Message } from '../components/contactMessage.js';
 function contactPageController(){
     //Craete Data Using Moustache
     let data = {
-        intro: "Get In Touch!",  
+        intro: "Contact Us",  
     }
     //Load Page Data
-    App.loadPage ('Contact', 'template-page-contact', data, () =>{
-        
-        //Render MapBox
-        var map = L.mapbox.map('map', 'mapbox.outdoors', {
-            accessToken: 'pk.eyJ1IjoibGZvcmRoYW0iLCJhIjoiY2s5ejM1cGFqMDY5dTNobWt4Zm96aXVkdCJ9.FidPVWO-jIPaltOb7y353g'
-        });
+    App.loadPage ('Contact | Rental Finder', 'template-page-contact', data, () =>{
         
         //get sign up form
         let contactForm = document.querySelector('#form-send-message');
@@ -34,6 +29,27 @@ function contactPageController(){
             Message.create(contactDataObj);
 
         });
+
+        //Back To Top Button
+        function returnTop(){
+            const btt = document.getElementById('btt');
+            if ( window.pageYOffset > 800 ) {
+                btt.classList.add("active-btn");
+            } else {
+                btt.classList.remove("active-btn");
+            }
+        }
+        window.onscroll = function() {
+            returnTop();
+        }
+
+        //Get Back to Top Button Button
+        const goTopPageBtn = document.querySelector('#btt');
+        //On Click
+        goTopPageBtn.addEventListener('click', () => {
+            //Link to Top
+            window.scrollTo(0, 0);
+        })
     });
 }
 
