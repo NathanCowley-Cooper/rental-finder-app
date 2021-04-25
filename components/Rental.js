@@ -1,6 +1,6 @@
 //Import Componenets
 import{ App } from "./App.js";
-import { userLoginPageController } from "../page-controllers/login.js";
+import { UserLoginPageController } from "../page-controllers/login.js";
 import { User } from './User.js';
 import { Notify } from './notify.js';
 import { Modal } from "./modal.js";
