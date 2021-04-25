@@ -29,7 +29,7 @@ const Modal = {
         //createmodalCloseBtn
         let modalCloseBtn = document.createElement('button');
         modalCloseBtn.className = 'modal-close-btn';
-        modalCloseBtn.innerHTML = 'CLOSE';
+        modalCloseBtn.innerHTML = '&times;';
 
         //append modalContent to modalDiv
         modalDiv.appendChild(modalContent);
@@ -67,9 +67,9 @@ const Modal = {
         //listen for esc key press
         document.addEventListener('keydown', Modal.modalEscKey);
 
-        // var map = L.mapbox.map('map', 'mapbox.outdoors', {
-        //     accessToken: 'pk.eyJ1IjoibGZvcmRoYW0iLCJhIjoiY2s5ejM1cGFqMDY5dTNobWt4Zm96aXVkdCJ9.FidPVWO-jIPaltOb7y353g'
-        // });
+        var map = L.mapbox.map('map', 'mapbox.outdoors', {
+            accessToken: 'pk.eyJ1IjoibGZvcmRoYW0iLCJhIjoiY2s5ejM1cGFqMDY5dTNobWt4Zm96aXVkdCJ9.FidPVWO-jIPaltOb7y353g'
+        });
 
     },
 

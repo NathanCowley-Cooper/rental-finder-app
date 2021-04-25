@@ -12,7 +12,7 @@ function createAccountPageController(){
     }
     
     //Load Page Data
-    App.loadPage ('Sign Up | Rental Finder', 'template-createAccount', {}, signUpEvent )
+    App.loadPage ('Create Account', 'template-createAccount', {}, signUpEvent )
 }
 
 function signUpEvent() {
@@ -32,6 +32,5 @@ function signUpEvent() {
         User.create(formDataObj);
     });
 }
-
 
 export { createAccountPageController } //Export Page Component

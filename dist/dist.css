@@ -6,16 +6,11 @@ html, body {
   padding: 0;
   margin: 0;
   min-height: 100%;
-  font-family: 'Muli', sans-serif;
-  scroll-behavior: smooth; 
-  }
-
-  ::-webkit-scrollbar {
-    display: none;
-}
+  font-family: arial;
+  scroll-behavior: smooth; }
 
 h1 {
-  font-family: 'Muli', sans-serif;
+  font-family: arial;
   font-weight: 400;
   font-size: 60px; }
 
@@ -47,46 +42,18 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 90px;
   top: 0;
   width: 100%;
-  padding: 0 1%;
+  padding: 0 0.5em;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); }
-
-/* ==========WEBSITE FOOTER============= */
-.page-footer {
-  background-color: #1f1f1f;
-  align-items: center;
-  justify-content: space-between;
-  top: 0;
-  width: 100%;
-  padding: 2.5% 7.5%;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); 
-}
-
-.page-footer h3{
-  font-family: 'Muli', sans-serif;
-  font-weight: 400;
-  font-size: 2.5vh;
-  color: white;
-  text-align: center;
-}
-
-.page-footer p{
-  font-family: 'Muli', sans-serif;
-  font-weight: 200;
-  font-size: 1.5vh;
-  line-height: 2.5vh;
-  color: white;
-  text-align: center;
-}
-
 
 /* ==========NAV BAR STYLING============= */
 #main-nav a {
-  color:  #1f1f1f;
+  color: #333;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Muli', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 17px; }
 
@@ -102,13 +69,13 @@ h1, h2, h3, h4, h5 {
   text-decoration: none;
   padding: 0.4em 1em;
   text-transform: uppercase;
-  color:  #1f1f1f; }
+  color: #333; }
 
 /* ==========LOGO============= */
 /* LOGO FADE-IN */
 .logo-img {
   margin: 1em;
-  height: 7.5vh;
+  height: 80px;
   width: auto;
   justify-items: flex-start; }
 
@@ -119,203 +86,33 @@ h1, h2, h3, h4, h5 {
   height: 100vh;
   background-image: url(../images/hero-image.jpg);
   background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  z-index: 90;
-}
-  
+  display: flex; }
 
 #home-text {
   background: white;
   padding: 2%;
   border-radius: 25px;
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07);
-  height: auto;
-  margin-left: 5%; 
-  width:22.5vw;
-}
+  height: 200px;
+  justify-self: end;
+  align-self: center;
+  margin-left: 5%; }
 
 #home-text h1 {
   color: #b82026;
-  font-size: 3vh;
+  font-size: 30px;
   margin: 0;
   margin-bottom: 0.3em; }
 
 #home-text h6 {
-  color: #414141;
-  font-size: 1.5vh;
+  color: black;
+  font-size: 15px;
   font-weight: 50;
   margin: 0; }
 
 .view-rentalPage-btn {
-  margin: 1em 0 0.5em 0;
+  margin: 1em 0;
   font-size: 1em; }
-
-#Links{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#Page-QuickLinks{
-  display: grid;
-  grid-template-rows: auto auto;
-  padding: 7.5% 7.5%;
-  background-color:#1f1f1f;
-}
-
-#Page-QuickLinks h1{
-  color: white;
-  font-family: 'Muli', sans-serif;
-  font-size: 4vh;
-  font-weight: 200;
-  text-align: center;
-  margin: 0; 
-  margin-bottom: 0.5em;
-}
-  
-.page-link{
-  height: 25vh;
-  width: 25vh;
-  margin: 10% 2.5%;
-}
-
-#Link_1{
-  align-self: center;
-  justify-self: center;
-  display: grid;
-}
-
-#Link_1:hover{
-  transform: scale(1.06);   /*Boxes Increase In Size By .04 when a user Hovers over Box*/
-  transition: transform .5s ease;
-  cursor: pointer;
-}
-
-#Link_2{
-  align-self: center;
-  justify-self: center;
-  display: grid;
-}
-
-#Link_2:hover{
-  transform: scale(1.06);   /*Boxes Increase In Size By .04 when a user Hovers over Box*/
-  transition: transform .5s ease;
-  cursor: pointer;
-}
-
-#Link_3{
-  align-self: center;
-  justify-self: center;
-  display: grid;
-}
-
-#Link_3:hover{
-  transform: scale(1.06);   /*Boxes Increase In Size By .04 when a user Hovers over Box*/
-  transition: transform .5s ease;
-  cursor: pointer;
-}
-
-#Page-QuickLinks h3{
-  color: white;
-  font-family: 'Muli', sans-serif;
-  font-size: 2.5vh;
-  font-weight: 200;
-  text-align: center;
-  margin: 0; 
-}
-
-#aboutUs{
-  display: grid;
-  grid-template-columns: 60% 40%;
-  margin: 7.5% 7.5%;
-}
-
-#column_One{
-  align-self: center;
-}
-
-#column_Two{
-  align-self: center;
-}
-
-#aboutUs h1{
-  color:  #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 6VH;
-  font-weight: 200;
-  text-align: left;
-  margin: 0; 
-}
-
-#aboutUs p{
-  color:  #1f1f1f;
-  font-size: 2vh;
-  line-height: 3vh;
-  font-weight: 200;
-}
-
-.aboutUs_Img{
-  height: 40vh;
-  width: auto;
-  margin-left: 25%;
-}
-
-#login-bar {
-  background: white;
-  padding: 2%;
-  border-radius: 25px;
-  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07);
-  height: auto;
-  margin-right: 5%; 
-}
-
-#login-bar h1 {
-  color:  #1f1f1f;
-  font-size: 2.5vh;
-  margin: 0;
-  margin-bottom: 0.3em;
-}
-
-#rental-image-login {
-  max-width: 100%;
-  height: 100vh;
-  background-image: url(../images/hero-image-login-home.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.row_three_home{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.row_three_home h2{
-  color:  #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  text-align: left;
-  margin: 0;
-  align-self: center; }
-
-.row_three_home a{
-  color:  #1f1f1f;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.row_three_home .field{
-  margin-bottom: 0em;
-  width: 100%;
-}
-
-#rental-image-login .button {
-  width: 80%;
-  margin: 0.5em 0; }
 
 /* ==========BUTTON STYLING============= */
 .Button_Table {
@@ -368,31 +165,25 @@ h1, h2, h3, h4, h5 {
 /* On Hover */
 .Button_One:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  color: #b82026;
-  transition: transform .5s ease; }
+  color: #b82026; }
 
 .Button_Two:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  color: #b82026;
-  transition: transform .5s ease; }
+  color: #b82026; }
 
 .Button_Three:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  color: #b82026;
-  transition: transform .5s ease; }
+  color: #b82026; }
 
 .Button_Four:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  color: #b82026;
-  transition: transform .5s ease; }
+  color: #b82026; }
 
 #button_heading:hover {
-  color: white;
-  transition: transform .5s ease; }
+  color: white; }
 
 .Button_Table .button-icon:hover {
-  color: white;
-  transition: transform .5s ease; }
+  color: white; }
 
 /* ==========ABOUT US============= */
 .about-us {
@@ -408,11 +199,11 @@ h1, h2, h3, h4, h5 {
 
 /* Heading Styling */
 .text h1 {
-  color:  #1f1f1f; }
+  color: black; }
 
 /* Paragraph Styling */
 .text p {
-  color: #1f1f1f;
+  color: black;
   line-height: 25px; }
 
 /* ==========LOGIN PAGE============= */
@@ -430,18 +221,16 @@ h1, h2, h3, h4, h5 {
 
 .login-page h1 {
   color: white;
-  text-align: center;
-  font-weight: 400;
-  font-size: 4vh;
-}
+  text-align: center; }
 
 .login-page .button {
-  width: 80%;
+  width: 40%;
   margin: 0.5em 0; }
 
 /* ==========FORM STYLING============= */
 .field {
-  margin-bottom: 1.2em; }
+  margin-bottom: 0.7em;
+  min-height: auto; }
 
 .inline-form {
   width: 100%;
@@ -458,155 +247,36 @@ h1, h2, h3, h4, h5 {
   outline: none;
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
 
-fieldset {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-size: 1em; }
-
 fieldset p {
   margin: 0; }
 
-.row_three{
+/* ==========MY PORILE PAGE============= */
+.userProfile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.row_three h1{
-  color: white;
-  font-family: 'Muli', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  text-align: left;
-  margin: 0;
-  align-self: center; }
-
-.row_three a{
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.row_three .field{
-  margin-bottom: 0em;
-}
-
-/* ==========MY PROFILE PAGE============= */
-.userProfile{
-  display: grid;
-  grid-template-rows: auto auto;}
-
+  grid-template-rows: 1fr 1fr; }
 
 .userProfile h1 {
-  color:  #1f1f1f;
-  font-size: 40px;
-  font-weight: 400;
-  text-align: left;
-   }
+  color: #b82026;
+  font-size: 50px;
+  margin-top: 0.5em;
+  margin-left: 0.5em; }
 
 #myProfile {
   display: grid;
-  grid-template-columns: 25% auto;
-  background: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(0.9);
-  transition: all 0.3s ease; }
+  grid-template-columns: 20% auto; }
 
-#user{
-  display: grid;
-  grid-template-rows: auto auto auto;
-  justify-items: center;
-  align-items: center;
-  padding: 4em 2em;
-}
+#myPic {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/user-icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: start;
+  margin-left: 2em; }
 
-.myPic{
-  width: 150px;
-  height:150px;
-  margin-bottom: 1em;
-}
-
-hr{
-  width: 850px;
-  float: left;
-  color:  #1f1f1f;
-}
-
-
-#your-profile{
-  background-color:  #1f1f1f;
-}
-
-#your-profile h1{
-  color: white;
-  margin: 0.5em;
-}
-
-.user_name{
+#myProfile h2 {
   color: #b82026;
-  font-family: 'Muli', sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  margin: 0.1em;
-}
-
-.user_type{
-  color:  #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 15px;
-  font-weight: 200;
-  margin-top: 0.2em; 
-}
-
-#userProfileContent{
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  align-items: center;
-}
-
-.Personal_info{
-  color: #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  margin:0;
-}
-
-#userProfileContent p{
-  color:  #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 20px;
-  font-weight: 200;
-  margin: 0;
-}
-
-#user_row_two{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-#user_row_three{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-#user_row_four .edit-btn{
-  background: white;
-  color:  #1f1f1f;
-  border: 1px solid #333;
-}
-
-#user_row_four .edit-btn:hover{
-  background: #282829;
-  color: white;
-  transform: scale(1.05); 
-  transition: transform .5s ease;
-}
-
-.delete-btn{
-  margin-left: 2em;
-}
+  font-size: 30px; }
 
 /* ==========CREATE ACCOUNT PAGE============= */
 .createAccount-Page {
@@ -623,13 +293,10 @@ hr{
 
 .createAccount-Page h1 {
   color: white;
-  text-align: center;
-  font-weight: 400;
-  font-size: 4vh;
-}
+  text-align: center; }
 
 .createAccount-Page .button {
-  width: 80%; }
+  width: 35%; }
 
 .form-create-account {
   align-self: center; }
@@ -644,12 +311,7 @@ hr{
   border-radius: 100px;
   border: 1px solid #ddd;
   width: 100%;
-  margin-bottom: 0.7em; 
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-}
+  margin-bottom: 0.7em; }
 
 #Dropdown:focus {
   border-color: #b82026;
@@ -657,53 +319,21 @@ hr{
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.07); }
 
 .field #firstName {
-  width:98%; }
+  margin-right: 0.5em; }
 
 .field #lastName {
-  width:98%;
-  justify-self: end;
-}
+  margin-left: 0.5em; }
 
 .field #mobile {
-  width:98%;
- }
+  margin-right: 0.5em; }
 
 .field #dob {
-  width:98%;
-  justify-self: end;
- }
-
-.row_six{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.row_six h1{
-  color: white;
-  font-family: 'Muli', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: left;
-  margin: 0;
-  align-self: center; }
-
-.row_six a{
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.row_six .submit{
-  margin-bottom: 0em;
-  width: 100%;
-}
+  margin-left: 0.5em; }
 
 /* ==========RENTAL PAGE============= */
 #rentals-list {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content:center;
-}
+  flex-wrap: wrap; }
 
 #rentals-list p {
   font-size: 20px;
@@ -711,13 +341,10 @@ hr{
 
 #filter-hero {
   background: white;
-  padding: 2% 4%;
+  padding: 2%;
   position: relative;
+  display: grid;
   justify-content: start; }
-
-  #filter-hero h2 {
-    font-size: 2.5vh;
-    font-weight: 400; }
 
 #rental-image {
   max-width: 100%;
@@ -741,58 +368,65 @@ hr{
   flex-grow: 1; }
 
 .rental-entry h3 {
-  font-size: 2vh; 
-  margin:0;}
+  font-size: 1.2em;
+  margin: 0 0 0.5em; }
 
 .rental-entry .rental-cover {
   max-width: 100%;
   /*Full Width*/
+  height: 250px;
+  /*Only 250px in Height*/
   height: auto; }
 
 .row_one {
-  padding: 2.5%; 
+  padding: 2.5%;
   display: grid;
   align-items: center; }
 
 .address {
-  font-family: 'Muli', sans-serif;
-  font-size: 20px;
-  font-weight: 300; }
+  font-family: arial;
+  font-size: 20px; }
 
 .row_two {
   display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 2.5%; }
+  grid-template-columns: 20% 20% 20% 40%;
+  padding: 0% 2.5%; }
 
 .column-1 {
   display: grid;
-  grid-template-columns: auto auto;
-  align-items: center; }
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
 
 .column-2 {
   display: grid;
-  grid-template-columns: auto auto;
-  align-items: center; }
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
 
 .column-3 {
   display: grid;
-  grid-template-columns: auto auto;
-  align-items: center; }
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2%; }
 
-.row_3{
+.column-4 {
   display: grid;
-  grid-template-columns: auto;
-  padding: 2.5%;  }
+  align-items: center;
+  padding: 2%; }
 
 .info {
-  font-size: 2.5vh;}
+  font-size: 20px; }
+
+.rental-entry:hover {
+  transform: scale(1.001); }
 
 .rental-entry.is-saved .rental-icon {
   display: block; }
 
 .rental-entry .rental-icon {
-  color:  #1f1f1f;
-  font-size: 3vh;
+  color: black;
+  font-size: 30px;
   display: block; }
 
 #user-saved-menu {
@@ -942,6 +576,22 @@ hr{
   50% {
     transform: scale(1); } }
 
+/* ==========NOTIFICATION STYLING ============= */
+#notifications {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  width: 300px; }
+
+.notification-entry {
+  padding: 1em;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 200px;
+  margin-bottom: 10px;
+  position: relative; }
+
 /* saved page */
 #rental-image-saved {
   max-width: 100%;
@@ -958,12 +608,11 @@ hr{
 
 #hero-text h1 {
   color: white;
-  margin: 0; 
-  font-size: 8vh;}
+  margin: 0; }
 
 #hero-text h6 {
   color: white;
-  font-size: 2vh;
+  font-size: 20px;
   font-weight: 50;
   margin: 0; }
 
@@ -975,39 +624,23 @@ hr{
   background: #b82026;
   color: #fff;
   border: none;
-  font-size: 1.4em;
+  font-size: 1.2em;
   transition: all 0.2s ease;
   cursor: pointer; }
 
 .button:hover {
-  background:  #1f1f1f; }
+  background: #282829;
+  transform: scale(1.05); }
 
 /* ==========FILTER BUTTON STYLING ============= */
 .filter-btn {
-  background: white;
-  color:#1f1f1f;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  font-size: 1.2em;
-  margin: 15px 15px 15px 0;
+  background: #282829;
+  font-size: 1em;
+  margin-right: 5px;
   cursor: pointer; }
 
 .filter-btn.is-active {
-  border: 2px solid #b82026;
-  color:#b82026;
-}
-
-.filter-btn:hover {
-  border: 2px solid #b82026;
-  background: white;
-  color:#b82026;
-}
-
-.filter-btn:active {
-  border: 2px solid #b82026;
-  color:#b82026;
-  margin:8px;
-}
-
+  background: #b82026; }
 
 /* ==========CONTACT PAGE STYLING ============= */
 #rental-image-contact {
@@ -1021,11 +654,7 @@ hr{
   display: grid;
   justify-content: center;
   align-content: center;
-  color: white; 
-  text-align: center;
-  font-weight: 400;
-  font-size: 4vh;}
-
+  color: white; }
 
 .page-content-contact {
   display: grid;
@@ -1039,17 +668,17 @@ hr{
   padding: 8% 15%; }
 
 .contact_details h2 {
-  color: #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 3vh;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
   font-weight: 600;
   text-align: left;
   margin: 0; }
 
 .contact_details h4 {
-  color: #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 1.5vh;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
   font-weight: 400;
   text-align: left;
   margin: 1em 1em 0.5em 0; }
@@ -1059,7 +688,7 @@ hr{
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 40vh;
+  height: 500px;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */ }
@@ -1071,9 +700,9 @@ hr{
   padding: 8% 15%; }
 
 .column_two h2 {
-  color: #1f1f1f;
-  font-family: 'Muli', sans-serif;
-  font-size: 3vh;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
   font-weight: 600;
   text-align: left;
   margin: 0 0 5% 0; }
@@ -1111,7 +740,7 @@ textarea {
   padding: 0.8em;
   border: 1px solid #ddd;
   width: 100%;
-  font-family: 'Muli', sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .input_textbox:focus {
   border-color: #b82026;
@@ -1122,47 +751,28 @@ textarea {
 .rental-modal {
   display: grid; }
 
-.content{
-  margin: 2% 4%;
-}
-.content-modal{
-  margin: 2% 5%;
-}
-
 .rental-modal .adddress {
   font-size: 2.2em; }
 
 .rental-modal .info {
-  font-size: 4vh;
-  color: #1f1f1f;
-  font-weight: 200; 
-  line-height: 180%;
-}
+  font-size: 2.5em;
+  color: black; }
 
 .rental-modal .rental-icon {
-  color: #1f1f1f;
-  font-size: 5vh;
-  display: block;
-  font-weight: 200; }
+  color: black;
+  font-size: 2.5em;
+  display: block; }
 
 .rental-cover-modal {
   width: 100%;
-  height:100vh;
   object-fit: cover; }
 
 .view-rental-btn {
-  margin: 20px; }
-
-.view-rental-btn:hover {
-  background-color: white;
-  border: 2px solid #b82026;
-  color: #b82026;
-  margin: 18px;
-}
+  margin: 1em; }
 
 .modal-content {
   display: grid;
-  margin: 0;
+  margin: 2% 15% 5% 15%;
   padding: 0; }
 
 .modal {
@@ -1186,14 +796,12 @@ textarea {
   border: none;
   transition: all 0.2s ease;
   cursor: pointer;
-  outline: none;
-  font-size: 1.5vh }
+  outline: none; }
 
 .modal-close-btn:hover {
   background: #b82026;
   color: #fff;
-  transform: scale(1.1);
-  transition: transform .5s ease;}
+  transform: scale(1.1); }
 
 .modal_row-1 {
   display: flex;
@@ -1202,71 +810,44 @@ textarea {
   margin: 1em 0; }
 
 .modal_row-1 .address {
-  font-family: 'Muli', sans-serif;
-  font-size: 4vh;
+  font-family: arial;
+  font-size: 30px;
   margin: 0; }
 
 .modal_row-2 {
   display: grid;
-  grid-template-columns: 15% 15% 15% 55%;
+  grid-template-columns: 10% 10% 10% 70%;
   margin-bottom: 0.5em; }
 
 .modal_row-3 {
   display: grid;
-  grid-template-columns: 30% 70%; 
-  margin: 5% 0;
-}
+  grid-template-columns: 70% 30%; }
 
 .modal_row-3 .info {
-  font-size: 2.5vh;
-  color:  #1f1f1f;
- }
+  font-size: 1.2em;
+  color: black;
+  margin-bottom: 0.5em;
+  margin-left: 1.0em; }
 
 .modal_column-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 2%;
-  margin-right: 2em; }
+  padding: 2%; }
 
 .modal_column-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 2%;
-  margin-right: 2em; }
+  padding: 2%; }
 
 .modal_column-3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 2%;
-  margin-right: 2em; }
+  padding: 2%; }
 
 .modal_column-4 {
   display: grid;
   align-items: center;
-  padding: 2%;
-  margin-right: 10em; }
-
-
-
-.Template_404{
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-.Template_404 h1{
-  font-family: 'Muli', sans-serif;
-  font-size: 80px;
-  font-weight: 600;
-  margin: 1em 0 0.2em 0;
-}
-
-.Template_404 h6{
-  font-family: 'Muli', sans-serif;
-  font-size: 20px;
-  font-weight: 200;
-  margin: 0;
-}
+  padding: 2%; }

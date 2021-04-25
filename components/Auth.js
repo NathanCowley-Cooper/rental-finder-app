@@ -10,7 +10,7 @@ const Auth = {
 
     login: (userData) => {
         //send userData to backend API using fetch - POST
-        fetch('https://rental-finder-api.herokuapp.com/api/auth/login',{
+        fetch('http://localhost:8081/api/auth/login',{
             method: 'post',
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify(userData)
@@ -36,7 +36,7 @@ const Auth = {
                         User.smoker = res.user.smoker;
                         User.dob = res.user.date_of_birth;
                     //4. Redirect To Homepage
-                    location.hash = '#rentals';
+                    location.hash = '#';
                     //5. Show Welcome Message
                     Notify.show(`Welcome ${User.firstName}`); 
                     console.log(res.user.first_name)
@@ -56,7 +56,7 @@ const Auth = {
         // 1. Check if the Token Exists in Local Storage
         if (localStorage.getItem('token') ){
             //validate token using backend API - Make a fetch request (GET)
-            fetch('https://rental-finder-api.herokuapp.com/api/auth/validate', {
+            fetch('http://localhost:8081/api/auth/validate', {
                 headers: { "Authorization": `Bearer ${localStorage.token}` }
             })
             .then(res => {

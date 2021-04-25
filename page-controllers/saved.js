@@ -8,12 +8,12 @@ import { User } from '../components/User.js';
 function savedPageController(){
     //Insert Data Using Moustache
     let data = {
-        intro: "Saved Rental Houses",
+        intro: "Saved Rentals",
         subHeading: "View your Saved Rentals Below!"      
     }
 
     //Load Page Data
-    App.loadPage ('Saved | Rental Finder', 'template-page-saved', data, () =>{
+    App.loadPage ('Saved', 'template-page-saved', data, () =>{
 
         // get div#rentalss-list
         const rentalsListDiv = document.querySelector('#rentals-list');
@@ -40,27 +40,6 @@ function savedPageController(){
                 Notify.show('Problem Loading Saved Rentals');
             });
         }
-
-        //Back To Top Button
-        function returnTop(){
-            const btt = document.getElementById('btt');
-            if ( window.pageYOffset > 800 ) {
-                btt.classList.add("active-btn");
-            } else {
-                btt.classList.remove("active-btn");
-            }
-        }
-        window.onscroll = function() {
-            returnTop();
-        }
-
-        //Get Back to Top Button Button
-        const goTopPageBtn = document.querySelector('#btt');
-        //On Click
-        goTopPageBtn.addEventListener('click', () => {
-            //Link to Top
-            window.scrollTo(0, 0);
-        })
     });
 
 }

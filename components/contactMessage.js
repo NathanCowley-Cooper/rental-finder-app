@@ -14,7 +14,7 @@ const Message = {
         //send userData to backend API using fetch - POST
         console.log(messageData);
         //Grab Messages from Backend
-        fetch('https://rental-finder-api.herokuapp.com/api/messages', {
+        fetch('http://localhost:8081/api/messages', {
         method:'post',
         headers:{"Content-Type": "application/json" },
         body: JSON.stringify (messageData)

@@ -7,7 +7,7 @@ function addRentalPageController(){
     
     
     //Load Page Data
-    App.loadPage ('Add Rental | Rental Finder', 'template-page-add-rental', {}, () =>{
+    App.loadPage ('Add Rental', 'template-page-add-rental', {}, () =>{
         //get create rental form
         let rentalForm = document.querySelector('#form-add-rental');
         console.log(rentalForm)
