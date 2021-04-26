@@ -723,18 +723,24 @@ html, body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-right: 1.5em; }
+  .modal-column-1 h3 {
+    margin-left: 1em; }
 
 .modal-column-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-right: 1.5em; }
+  .modal-column-2 h3 {
+    margin-left: 1em; }
 
 .modal-column-3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-right: 1.5em; }
+  .modal-column-3 h3 {
+    margin-left: 1em; }
 
 .modal-column-4 {
   display: grid;
@@ -1163,13 +1169,13 @@ header {
           color: #b82026; }
           .page-header #main-nav .nav__list .nav__item a:hover::after {
             transform: scaleX(1) !important;
-            bottom: 0 !important; }
+            top: 0 !important; }
         .page-header #main-nav .nav__list .nav__item a::after {
           content: "";
           position: absolute;
           width: 100%;
-          border-bottom: 2px solid #b82026;
-          bottom: 0;
+          border-top: 2px solid #b82026;
+          top: 0;
           left: 0;
           transform: scaleX(0);
           transform-origin: left;

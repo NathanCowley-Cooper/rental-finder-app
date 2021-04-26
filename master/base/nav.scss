@@ -78,7 +78,7 @@ header{
               color: $rental-red;
               &::after{
                 transform: scaleX(1) !important;
-                bottom: 0 !important;
+                top: 0 !important;
               }
             }
 
@@ -86,8 +86,8 @@ header{
               content: "";
               position: absolute;
               width: 100%;
-              border-bottom: 2px solid $rental-red;
-              bottom: 0;
+              border-top: 2px solid $rental-red;
+              top: 0;
               left: 0;
               transform: scaleX(0);
               transform-origin: left;
