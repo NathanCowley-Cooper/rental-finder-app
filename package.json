@@ -11,10 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "animejs": "^3.2.1",
-    "css-loader": "^5.0.1",
-    "mustache": "^4.1.0",
+    "css-loader": "^5.2.4",
+    "mustache": "^4.2.0",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0",
+    "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0"
   }
 }
