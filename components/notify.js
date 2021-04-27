@@ -1,6 +1,6 @@
 //Import Components
 import{ App } from "./App.js";
-import anime from './../node_modules/animejs/lib/anime.es.js';
+//import anime from './../node_modules/animejs/lib/anime.es.js';
 
 //Create Notify component
 const Notify = {
