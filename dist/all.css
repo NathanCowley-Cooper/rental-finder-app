@@ -257,6 +257,9 @@ html, body {
   margin-bottom: 10px;
   position: relative; }
 
+.none {
+  display: none; }
+
 .mobile-template {
   display: none; }
 
