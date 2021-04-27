@@ -5,7 +5,9 @@
   "main": "index.html",
   "scripts": {
     "scss": "node-sass -w master/master.scss dist/all.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+
   },
   "author": "Nathan Cowley-Cooper",
   "license": "ISC",
