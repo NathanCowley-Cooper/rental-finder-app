@@ -43,19 +43,19 @@ button:focus {
     margin-top: 5%;
     background: $rental-red;
     color: #fff;
-    padding: 1em 0em 1em 2em;
+    padding: 1em 2em;
 
     &:hover {
         .float-right{
-          margin: 0 1.6em 0 1.6em;
           transition: ease-in 0.3s;
+          transform: translateX(6px);
         }
     }
 }
 
 //Button Arrow
 .float-right{
-    margin: 0 2em 0 1.2em;
+    margin: 0 0 0 1.2em;
 }
 
 .view-rental-modal-btn{
@@ -63,7 +63,7 @@ button:focus {
     background: $rental-red;
     border:2.5px solid $rental-red;
     color: #fff;
-    padding: 0.6em 0em 0.6em 2em;
+    padding: 0.6em 2em;
 
 }
 

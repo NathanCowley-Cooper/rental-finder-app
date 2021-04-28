@@ -611,7 +611,7 @@ html, body {
     .rental-entry:hover h5 {
       color: #1b1d1f; }
     .rental-entry:hover .float-right {
-      margin: 0 1.6em 0 1.6em;
+      transform: translateX(6px);
       transition: ease-in 0.3s; }
 
 #rentals-list-filters {
@@ -981,20 +981,20 @@ button:focus {
   margin-top: 5%;
   background: #b82026;
   color: #fff;
-  padding: 1em 0em 1em 2em; }
+  padding: 1em 2em; }
   .view-rental-page:hover .float-right {
-    margin: 0 1.6em 0 1.6em;
-    transition: ease-in 0.3s; }
+    transition: ease-in 0.3s;
+    transform: translateX(6px); }
 
 .float-right {
-  margin: 0 2em 0 1.2em; }
+  margin: 0 0 0 1.2em; }
 
 .view-rental-modal-btn {
   margin: 5%;
   background: #b82026;
   border: 2.5px solid #b82026;
   color: #fff;
-  padding: 0.6em 0em 0.6em 2em; }
+  padding: 0.6em 2em; }
 
 .sav-btn {
   background: #b82026;
